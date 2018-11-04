@@ -19,6 +19,6 @@ public class DaytimeSim : MonoBehaviour {
     {
         float t = Mathf.PingPong(Time.time, duration) / duration;
         lt.color = Color.Lerp(color0, color1, t);
-        direction.rotation.x += 1;
+        
     }
 }
