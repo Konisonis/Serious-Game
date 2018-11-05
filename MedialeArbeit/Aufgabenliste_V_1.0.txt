@@ -1,0 +1,18 @@
+Mediale Arbeit
+
+Aufgaben
+
+- Charakter Movement
+- Charakter Fähigkeiten
+- Charakter Models
+- Charakter Animationen <<< Robin
+- Input Handling
+- Sounds (Environment, Aktionen, Charaktere, mit Tabelle, welche Sounds wir brauchen und handlen) <<< Joffrey
+- Menu Improvement (Volume einstellen ...) <<< Konstantin
+- Ingame Menu (Optionen, Quit, Restart, Continue) <<< Konstantin
+- Story Telling
+- Map design (verschiedene Settings) <<< Ravell
+- Achievements (DU hast drei Löcher gebuddelt, du kannst nun schneller buddeln)
+- HUD -> aktives Tier anzeigen, Wenn achievement erreicht wurde Textmessage einblenden
+- Kleine Funkelgrafik für Interaktionsmöglichkeiten
+- Storyboards für Interaktionen
