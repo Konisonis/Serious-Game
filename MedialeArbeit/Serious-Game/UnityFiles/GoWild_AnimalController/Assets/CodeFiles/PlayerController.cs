@@ -17,10 +17,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var y = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
+        var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-        transform.Rotate(0, 0, y);
-        transform.Translate(0, z, 0);
+        transform.Rotate(0, 0, rot);
+        transform.Translate(0, trans, 0);
     }
 }

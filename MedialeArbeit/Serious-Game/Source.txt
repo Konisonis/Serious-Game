@@ -1,7 +1,0 @@
-Name - Typ - Autor - URL
-
-
-Dog_v1 - 3D Modell - printable_models - https://free3d.com/3d-model/dog-v1--722788.html
-pexels-photo-139315 - Texture - FWStudio - https://www.pexels.com/photo/green-grass-lawn-139315/
-yb0gh9no70-trees9 - 3D Modells - kim - https://free3d.com/3d-model/trees-9-53338.html
-pexels-photo-214045 - Texture - photocollections.io - https://www.pexels.com/photo/abstract-background-close-up-construction-214045/
