@@ -4,3 +4,5 @@ Name - Typ - Autor - URL
 Dog_v1 - 3D Modell - printable_models - https://free3d.com/3d-model/dog-v1--722788.html
 pexels-photo-139315 - Texture - FWStudio - https://www.pexels.com/photo/green-grass-lawn-139315/
 yb0gh9no70-trees9 - 3D Modells - kim - https://free3d.com/3d-model/trees-9-53338.html
+BeachBallColor - Texture - - http://www.robinwood.com/Catalog/FreeStuff/Textures/TextureDownloads/Balls/BeachBallColor.jpg
+Bird V1 - 3D Modell - printable_models - https://free3d.com/3d-model/bird-v1--282209.html
