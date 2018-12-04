@@ -10,6 +10,9 @@ public class DuckController : MonoBehaviour {
 
     private bool isGrounded;
 
+    public motionDetector leftJoyCon;
+    public motionDetector rightJoyCon;
+
     void Start()
     {
         active = true;
@@ -24,6 +27,11 @@ public class DuckController : MonoBehaviour {
 
             transform.Rotate(0, rot, 0);
             transform.Translate(0, 0, trans);
+
+            if(leftJoyCon.isWalking() && rightJoyCon.isWalking()){
+                trans = 1 * Time.deltaTime * speed;
+                transform.Translate(0, 0, trans);
+            }
 
             if (Input.GetButtonDown("Jump"))
             {
