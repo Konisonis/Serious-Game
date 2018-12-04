@@ -5,6 +5,7 @@ using UnityEngine;
 public class JoyconController : MonoBehaviour {
 	
     public JoyconManager.JoyconType joyconType;
+
     public float[] stick;
     public Vector3 gyro = Vector3.zero;
     public float gyroMagnitude;

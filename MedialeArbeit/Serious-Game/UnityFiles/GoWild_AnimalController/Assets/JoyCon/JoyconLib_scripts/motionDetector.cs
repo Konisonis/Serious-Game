@@ -10,8 +10,6 @@ public class motionDetector : MonoBehaviour {
 
 	public int zTopMargin;
 	public int zBottomMargin;
-	public int zSmallerThanMargin;
-	public int zBiggerThanMargin;
 
 	float stopTime;
 	public float elapsedTimeForHalt;
@@ -29,8 +27,6 @@ public class motionDetector : MonoBehaviour {
 
 		stopTime = 0;
 		walking = false;
-
-		//InvokeRepeating("checkIfWalking", 0.5f, 0.5f);
 	}
 	
 	// Update is called once per frame
@@ -57,11 +53,9 @@ public class motionDetector : MonoBehaviour {
 		}
 
 		if(accelarationVector.z < zBottomMargin && (160 < joycon.rotation.y && joycon.rotation.y < 210)){
-			zSmallerThanMargin++;
 			stopTime = Time.time;
 			walking = true;
 		} else if(accelarationVector.z > zTopMargin){
-			zBiggerThanMargin++;
 			stopTime = Time.time;
 			walking = true;
 		} else{

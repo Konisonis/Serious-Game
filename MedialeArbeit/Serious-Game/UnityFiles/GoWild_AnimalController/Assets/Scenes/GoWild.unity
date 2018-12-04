@@ -1195,6 +1195,8 @@ MonoBehaviour:
   rotSpeed: 150
   grounddetector: {fileID: 0}
   active: 0
+  leftJoyCon: {fileID: 1236271006}
+  rightJoyCon: {fileID: 1546959204}
 --- !u!136 &1193812384
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1445,7 +1447,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joyconType: 0
-  stick: []
+  stick:
+  - 0
+  - 0
   gyro: {x: 0, y: 0, z: 0}
   gyroMagnitude: 0
   accel: {x: 0, y: 0, z: 0}
@@ -1517,9 +1521,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f63a4cf7c34904827c2dddbbe73f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   rotSpeed: 0.1
+  accelarationVector: {x: 0, y: 0, z: 0}
+  zTopMargin: 1500
+  zBottomMargin: -1500
+  elapsedTimeForHalt: 0.25
   joycon: {fileID: 1236271002}
+  walking: 0
 --- !u!1 &1330139113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,9 +1662,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f63a4cf7c34904827c2dddbbe73f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   rotSpeed: 0.1
+  accelarationVector: {x: 0, y: 0, z: 0}
+  zTopMargin: 1500
+  zBottomMargin: -1500
+  elapsedTimeForHalt: 0.25
   joycon: {fileID: 1546959205}
+  walking: 0
 --- !u!114 &1546959205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,7 +1681,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joyconType: 1
-  stick: []
+  stick:
+  - 0
+  - 0
   gyro: {x: 0, y: 0, z: 0}
   gyroMagnitude: 0
   accel: {x: 0, y: 0, z: 0}
@@ -1703,7 +1717,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 872d0af977f65496881e8ad0f56511d3, type: 2}
+  - {fileID: 2100000, guid: 40b1f3138cb6c40c0b2759fe67c95318, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

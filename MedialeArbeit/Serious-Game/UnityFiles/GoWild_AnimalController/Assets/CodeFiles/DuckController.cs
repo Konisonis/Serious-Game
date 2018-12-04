@@ -25,13 +25,15 @@ public class DuckController : MonoBehaviour {
             var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
             var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-            transform.Rotate(0, rot, 0);
-            transform.Translate(0, 0, trans);
-
             if(leftJoyCon.isWalking() && rightJoyCon.isWalking()){
                 trans = 1 * Time.deltaTime * speed;
                 transform.Translate(0, 0, trans);
             }
+
+            rot = leftJoyCon.joycon.stick[0] * Time.deltaTime * rotSpeed;
+
+            transform.Rotate(0, rot, 0);
+            transform.Translate(0, 0, trans);
 
             if (Input.GetButtonDown("Jump"))
             {
