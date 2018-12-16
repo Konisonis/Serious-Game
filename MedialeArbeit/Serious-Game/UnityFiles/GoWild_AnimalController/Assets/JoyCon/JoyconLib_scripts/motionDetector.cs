@@ -49,6 +49,14 @@ public class motionDetector : MonoBehaviour {
 		accelarationVector.y = Mathf.Round((joycon.accel.y * joycon.accelMagnitude) * 1000);
 		accelarationVector.z = Mathf.Round((joycon.accel.z * joycon.accelMagnitude) * 1000);
 
+		if (!inWalkingOrientation) {
+			CancelInvoke ();
+			inWalkingOrientation = isInWalkingOrientation ();
+			if (inWalkingOrientation) {
+				InvokeRepeating ("checkSetOrientations", 3f, 3f);
+			}
+		}
+
 		if(isWalking()){
 			GetComponent<Renderer>().material.color = Color.yellow;
 		}else{
@@ -60,25 +68,28 @@ public class motionDetector : MonoBehaviour {
 		if((stopTime + elapsedTimeForHalt) < Time.time){
 			walking = false;
 		}
-		if (isInWalkingOrientation()) {
-			if (accelarationVector.z < zBottomMargin) {
-				stopTime = Time.time;
-				walking = true;
-			} else if (accelarationVector.z > zTopMargin) {
-				stopTime = Time.time;
-				walking = true;
-			} else {
-			
-			}
+		if (accelarationVector.z < zBottomMargin) {
+			stopTime = Time.time;
+			walking = true;
+		} else if (accelarationVector.z > zTopMargin) {
+			stopTime = Time.time;
+			walking = true;
+		} else {
+		
 		}
-		return walking;
+		return (walking && inWalkingOrientation);
 	}
 
 	public bool isInWalkingOrientation(){
-		inWalkingOrientation = 
+		return(
 			(160 < joycon.rotation.y && joycon.rotation.y < 210) &&
 			(0 <= joycon.rotation.x && joycon.rotation.x < 50) || (340 < joycon.rotation.x && joycon.rotation.x <= 360) &&
-			(240 < joycon.rotation.z && joycon.rotation.z < 310);
-		return (inWalkingOrientation);
+			(240 < joycon.rotation.z && joycon.rotation.z < 310)
+		);
+	}
+
+
+	public void checkSetOrientations(){
+		inWalkingOrientation = isInWalkingOrientation ();
 	}
 }
