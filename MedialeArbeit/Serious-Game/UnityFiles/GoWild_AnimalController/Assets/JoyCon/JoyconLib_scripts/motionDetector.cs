@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class motionDetector : MonoBehaviour {
     public float rotSpeed;
-	float smooth = 5.0f;
 
 	public Vector3 accelarationVector;
+	public Vector3 rotationVector;
+	private Quaternion rotationQuaternion;
 
 	public int zTopMargin;
 	public int zBottomMargin;
@@ -18,10 +19,12 @@ public class motionDetector : MonoBehaviour {
 	private Color joyConColor;
 
 	public bool walking;
+	public bool inWalkingOrientation;
 
 	// Use this for initialization
 	void Start () {
 		accelarationVector = Vector3.zero;
+		rotationVector = Vector3.zero;
 
 		joyConColor = GetComponent<Renderer>().material.color;
 
@@ -31,11 +34,17 @@ public class motionDetector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Vector3 rotationVector = new Vector3(joycon.rotation.x, joycon.rotation.y, joycon.rotation.z);
-		Quaternion rotationQuaternion = Quaternion.Euler(rotationVector);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotationQuaternion,  Time.deltaTime * smooth);
+		rotationVector.x = joycon.rotation.x;
+		rotationVector.y = joycon.rotation.y;
+		rotationVector.z = joycon.rotation.z;
+
+		rotationQuaternion = Quaternion.Euler(rotationVector);
 		transform.rotation = rotationQuaternion;
-		
+
+		rotationVector.x = Mathf.Round (rotationVector.x);
+		rotationVector.y = Mathf.Round (rotationVector.y);
+		rotationVector.z = Mathf.Round (rotationVector.z);
+				
 		accelarationVector.x = Mathf.Round((joycon.accel.x * joycon.accelMagnitude) * 1000);
 		accelarationVector.y = Mathf.Round((joycon.accel.y * joycon.accelMagnitude) * 1000);
 		accelarationVector.z = Mathf.Round((joycon.accel.z * joycon.accelMagnitude) * 1000);
@@ -51,16 +60,25 @@ public class motionDetector : MonoBehaviour {
 		if((stopTime + elapsedTimeForHalt) < Time.time){
 			walking = false;
 		}
-
-		if(accelarationVector.z < zBottomMargin && (160 < joycon.rotation.y && joycon.rotation.y < 210)){
-			stopTime = Time.time;
-			walking = true;
-		} else if(accelarationVector.z > zTopMargin){
-			stopTime = Time.time;
-			walking = true;
-		} else{
+		if (isInWalkingOrientation()) {
+			if (accelarationVector.z < zBottomMargin) {
+				stopTime = Time.time;
+				walking = true;
+			} else if (accelarationVector.z > zTopMargin) {
+				stopTime = Time.time;
+				walking = true;
+			} else {
 			
+			}
 		}
 		return walking;
+	}
+
+	public bool isInWalkingOrientation(){
+		inWalkingOrientation = 
+			(160 < joycon.rotation.y && joycon.rotation.y < 210) &&
+			(0 <= joycon.rotation.x && joycon.rotation.x < 50) || (340 < joycon.rotation.x && joycon.rotation.x <= 360) &&
+			(240 < joycon.rotation.z && joycon.rotation.z < 310);
+		return (inWalkingOrientation);
 	}
 }
