@@ -34,7 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-MedialeArbeit/Serious-Game/UnityFiles/GoWild_AnimalController/Assets/JoyCon/JoyconLib_plugins/win64/hidapi.dll.meta
-MedialeArbeit/Serious-Game/UnityFiles/GoWild_AnimalController/Assets/JoyCon/JoyconLib_plugins/win64/hidapi.dll
-MedialeArbeit/Serious-Game/UnityFiles/GoWild_AnimalController/Assets/JoyCon/JoyconLib_plugins/win32/hidapi.dll.meta
-MedialeArbeit/Serious-Game/UnityFiles/GoWild_AnimalController/Assets/JoyCon/JoyconLib_plugins/win32/hidapi.dll
+
+MedialeArbeit/Serious-Game/UnityFiles/GoWild_AnimalController/ProjectSettings/ProjectVersion.txt
