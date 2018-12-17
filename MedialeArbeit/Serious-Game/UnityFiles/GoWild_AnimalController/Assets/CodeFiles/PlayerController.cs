@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour {
 
     private bool isGrounded;
 
-    public motionDetector leftJoyCon;
-    public motionDetector rightJoyCon;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -20,13 +17,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var rot = (Input.GetAxis("Horizontal") + leftJoyCon.joycon.stick[0]) * Time.deltaTime * rotSpeed;
+        var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
         var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-
-        if(leftJoyCon.isWalking() && rightJoyCon.isWalking()){
-            trans = 1 * Time.deltaTime * speed;
-            transform.Translate(0, trans, 0);
-        }
 
         transform.Rotate(0, 0, rot);
         transform.Translate(0, trans, 0);
