@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : Controller{
+public class DogController : Controller{
 
     public float speed, rotSpeed;
     public Transform grounddetector;
