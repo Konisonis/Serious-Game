@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DuckController : MonoBehaviour {
+public class DuckController : Controller {
 
     public float speed, rotSpeed;
     public Transform grounddetector;
-    public bool active;
 
     private bool isGrounded;
 
@@ -15,7 +14,7 @@ public class DuckController : MonoBehaviour {
 
     void Start()
     {
-        active = true;
+        active = false;
     }
 
     private void FixedUpdate()
@@ -41,6 +40,14 @@ public class DuckController : MonoBehaviour {
             }
 
             GetComponent<Rigidbody>().mass = 50 + GetComponent<Rigidbody>().position.y * 0.5f;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Balloon"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }

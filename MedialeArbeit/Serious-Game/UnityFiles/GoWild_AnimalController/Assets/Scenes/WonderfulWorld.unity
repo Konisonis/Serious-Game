@@ -293,12 +293,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2494334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d502a613a92b4b428f6944f722521b0, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ff0b6cf15904653ae518f09fb65840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -10
   rotSpeed: 50
   grounddetector: {fileID: 0}
+  isGrounded: 0
   leftJoyCon: {fileID: 1483114646}
   rightJoyCon: {fileID: 794183556}
 --- !u!54 &2494336
@@ -14010,7 +14011,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fefea7503828ac948aa711fa30b2a516, type: 3}
       propertyPath: m_Name
-      value: HUUUUUUUUND
+      value: Dog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fefea7503828ac948aa711fa30b2a516, type: 3}
