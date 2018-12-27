@@ -31,8 +31,8 @@ using Node = UnityEngine.VR.VRNode;
 using NodeState = UnityEngine.VR.VRNodeState;
 using Settings = UnityEngine.VR.VRSettings;
 #else
-using Node = UnityEngine.VR.VRNode;
-using Settings = UnityEngine.VR.VRSettings;
+using Node = UnityEngine.XR.XRNode;
+using Settings = UnityEngine.XR.XRSettings;
 #endif
 
 /// <summary>
@@ -143,7 +143,7 @@ public class OVRDisplay
 #if UNITY_2017_2_OR_NEWER
         UnityEngine.XR.InputTracking.Recenter();
 #else
-		UnityEngine.VR.InputTracking.Recenter();
+		UnityEngine.XR.InputTracking.Recenter();
 #endif
 
 		// The current poses are cached for the current frame and won't be updated immediately
@@ -168,7 +168,7 @@ public class OVRDisplay
 				return Vector3.zero;
 
 			Vector3 retVec = Vector3.zero;
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.Head, NodeStatePropertyType.Acceleration, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.Head, NodeStatePropertyType.Acceleration, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
 				return retVec;
 			return Vector3.zero;
 		}
@@ -185,7 +185,7 @@ public class OVRDisplay
 				return Vector3.zero;
 
 			Vector3 retVec = Vector3.zero;
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.Head, NodeStatePropertyType.AngularAcceleration, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.Head, NodeStatePropertyType.AngularAcceleration, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
 				return retVec;
 			return Vector3.zero;
 
@@ -203,7 +203,7 @@ public class OVRDisplay
                 return Vector3.zero;
 
 			Vector3 retVec = Vector3.zero;
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.Head, NodeStatePropertyType.Velocity, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.Head, NodeStatePropertyType.Velocity, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
 				return retVec;
 			return Vector3.zero;
 		}
@@ -219,7 +219,7 @@ public class OVRDisplay
 				return Vector3.zero;
 
 			Vector3 retVec = Vector3.zero;
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.Head, NodeStatePropertyType.AngularVelocity, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.Head, NodeStatePropertyType.AngularVelocity, OVRPlugin.Node.Head, OVRPlugin.Step.Render, out retVec))
 				return retVec;
 			return Vector3.zero;
 		}
@@ -231,7 +231,7 @@ public class OVRDisplay
 #if UNITY_2017_2_OR_NEWER
     public EyeRenderDesc GetEyeRenderDesc(UnityEngine.XR.XRNode eye)
 #else
-	public EyeRenderDesc GetEyeRenderDesc(UnityEngine.VR.VRNode eye)
+	public EyeRenderDesc GetEyeRenderDesc(UnityEngine.XR.XRNode eye)
 #endif
 	{
 		return eyeDescs[(int)eye];
@@ -323,22 +323,22 @@ public class OVRDisplay
 		ConfigureEyeDesc(UnityEngine.XR.XRNode.LeftEye);
         ConfigureEyeDesc(UnityEngine.XR.XRNode.RightEye);
 #else
-		ConfigureEyeDesc(UnityEngine.VR.VRNode.LeftEye);
-		ConfigureEyeDesc(UnityEngine.VR.VRNode.RightEye);
+		ConfigureEyeDesc(UnityEngine.XR.XRNode.LeftEye);
+		ConfigureEyeDesc(UnityEngine.XR.XRNode.RightEye);
 #endif
 	}
 
 #if UNITY_2017_2_OR_NEWER
     private void ConfigureEyeDesc(UnityEngine.XR.XRNode eye)
 #else
-	private void ConfigureEyeDesc(UnityEngine.VR.VRNode eye)
+	private void ConfigureEyeDesc(UnityEngine.XR.XRNode eye)
 #endif
 	{
 		if (!OVRManager.isHmdPresent)
 			return;
 
-		int eyeTextureWidth = Settings.eyeTextureWidth;
-		int eyeTextureHeight = Settings.eyeTextureHeight;
+		int eyeTextureWidth = UnityEngine.XR.XRSettings.eyeTextureWidth;
+		int eyeTextureHeight = UnityEngine.XR.XRSettings.eyeTextureHeight;
 
 		eyeDescs[(int)eye] = new EyeRenderDesc();
 		eyeDescs[(int)eye].resolution = new Vector2(eyeTextureWidth, eyeTextureHeight);

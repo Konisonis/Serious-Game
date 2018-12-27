@@ -625,7 +625,7 @@ public class OVRLint : EditorWindow
 #if UNITY_2017_2_OR_NEWER
 		if (UnityEngine.XR.XRSettings.eyeTextureResolutionScale > 1.5)
 #else
-		if (UnityEngine.VR.VRSettings.renderScale > 1.5)
+		if (UnityEngine.XR.XRSettings.eyeTextureResolutionScale > 1.5)
 #endif
 		{
 			AddFix("Optimize Render Scale", "Render scale above 1.5 is extremely expensive on the GPU, with little if any positive visual benefit.", delegate (UnityEngine.Object obj, bool last, int selected)
@@ -633,7 +633,7 @@ public class OVRLint : EditorWindow
 #if UNITY_2017_2_OR_NEWER
 				UnityEngine.XR.XRSettings.eyeTextureResolutionScale = 1.5f;
 #else
-				UnityEngine.VR.VRSettings.renderScale = 1.5f;
+				UnityEngine.XR.XRSettings.eyeTextureResolutionScale = 1.5f;
 #endif
 			}, null, false, "Fix");
 		}

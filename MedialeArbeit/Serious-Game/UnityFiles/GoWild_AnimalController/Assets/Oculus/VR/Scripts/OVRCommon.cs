@@ -30,9 +30,9 @@ using Node = UnityEngine.VR.VRNode;
 using NodeState = UnityEngine.VR.VRNodeState;
 using Device = UnityEngine.VR.VRDevice;
 #else
-using InputTracking = UnityEngine.VR.InputTracking;
-using Node = UnityEngine.VR.VRNode;
-using Device = UnityEngine.VR.VRDevice;
+using InputTracking = UnityEngine.XR.InputTracking;
+using Node = UnityEngine.XR.XRNode;
+using Device = UnityEngine.XR.XRDevice;
 #endif
 
 /// <summary>
@@ -47,8 +47,8 @@ public static class OVRExtensions
 	{
 		OVRPose headPose;
 
-		headPose.position = InputTracking.GetLocalPosition(Node.Head);
-		headPose.orientation = InputTracking.GetLocalRotation(Node.Head);
+		headPose.position = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
+		headPose.orientation = UnityEngine.XR.InputTracking.GetLocalRotation(UnityEngine.XR.XRNode.Head);
 
 		var ret = headPose * transform.ToHeadSpacePose(camera);
 
@@ -63,8 +63,8 @@ public static class OVRExtensions
 	{
 		OVRPose headPose;
 
-		headPose.position = InputTracking.GetLocalPosition(Node.Head);
-		headPose.orientation = InputTracking.GetLocalRotation(Node.Head);
+		headPose.position = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
+		headPose.orientation = UnityEngine.XR.InputTracking.GetLocalRotation(UnityEngine.XR.XRNode.Head);
 
 		// Transform from tracking-Space to head-Space
 		OVRPose poseInHeadSpace = headPose.Inverse() * trackingSpacePose;
@@ -222,10 +222,10 @@ public static class OVRNodeStateProperties
 
 	public static bool IsHmdPresent()
 	{
-		return Device.isPresent;
+		return UnityEngine.XR.XRDevice.isPresent;
 	}
 
-	public static bool GetNodeStatePropertyVector3(Node nodeType, NodeStatePropertyType propertyType, OVRPlugin.Node ovrpNodeType, OVRPlugin.Step stepType, out Vector3 retVec)
+	public static bool GetNodeStatePropertyVector3(UnityEngine.XR.XRNode nodeType, NodeStatePropertyType propertyType, OVRPlugin.Node ovrpNodeType, OVRPlugin.Step stepType, out Vector3 retVec)
 	{
 		retVec = Vector3.zero;
 		switch (propertyType)
@@ -298,7 +298,7 @@ public static class OVRNodeStateProperties
 		return false;
 	}
 
-	public static bool GetNodeStatePropertyQuaternion(Node nodeType, NodeStatePropertyType propertyType, OVRPlugin.Node ovrpNodeType, OVRPlugin.Step stepType, out Quaternion retQuat)
+	public static bool GetNodeStatePropertyQuaternion(UnityEngine.XR.XRNode nodeType, NodeStatePropertyType propertyType, OVRPlugin.Node ovrpNodeType, OVRPlugin.Step stepType, out Quaternion retQuat)
 	{
 		retQuat = Quaternion.identity;
 		switch (propertyType)

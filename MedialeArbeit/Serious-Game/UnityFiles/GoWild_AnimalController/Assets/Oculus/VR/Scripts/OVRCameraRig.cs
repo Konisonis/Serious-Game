@@ -23,8 +23,8 @@ using UnityEngine;
 using InputTracking = UnityEngine.XR.InputTracking;
 using Node = UnityEngine.XR.XRNode;
 #else
-using InputTracking = UnityEngine.VR.InputTracking;
-using Node = UnityEngine.VR.VRNode;
+using InputTracking = UnityEngine.XR.InputTracking;
+using Node = UnityEngine.XR.XRNode;
 #endif
 
 /// <summary>
@@ -167,9 +167,9 @@ public class OVRCameraRig : MonoBehaviour
 			Vector3 centerEyePosition = Vector3.zero;
 			Quaternion centerEyeRotation = Quaternion.identity;
 
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.CenterEye, NodeStatePropertyType.Position, OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render, out centerEyePosition))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.CenterEye, NodeStatePropertyType.Position, OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render, out centerEyePosition))
 				centerEyeAnchor.localPosition = centerEyePosition;
-			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(Node.CenterEye, NodeStatePropertyType.Orientation, OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render, out centerEyeRotation))
+			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(UnityEngine.XR.XRNode.CenterEye, NodeStatePropertyType.Orientation, OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render, out centerEyeRotation))
 				centerEyeAnchor.localRotation = centerEyeRotation;
 		}
 		else
@@ -192,13 +192,13 @@ public class OVRCameraRig : MonoBehaviour
 			Quaternion leftEyeRotation = Quaternion.identity;
 			Quaternion rightEyeRotation = Quaternion.identity;
 
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.LeftEye, NodeStatePropertyType.Position, OVRPlugin.Node.EyeLeft, OVRPlugin.Step.Render, out leftEyePosition))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.LeftEye, NodeStatePropertyType.Position, OVRPlugin.Node.EyeLeft, OVRPlugin.Step.Render, out leftEyePosition))
 				leftEyeAnchor.localPosition = leftEyePosition;
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.RightEye, NodeStatePropertyType.Position, OVRPlugin.Node.EyeRight, OVRPlugin.Step.Render, out rightEyePosition))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.RightEye, NodeStatePropertyType.Position, OVRPlugin.Node.EyeRight, OVRPlugin.Step.Render, out rightEyePosition))
 				rightEyeAnchor.localPosition = rightEyePosition;
-			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(Node.LeftEye, NodeStatePropertyType.Orientation, OVRPlugin.Node.EyeLeft, OVRPlugin.Step.Render, out leftEyeRotation))
+			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(UnityEngine.XR.XRNode.LeftEye, NodeStatePropertyType.Orientation, OVRPlugin.Node.EyeLeft, OVRPlugin.Step.Render, out leftEyeRotation))
 				leftEyeAnchor.localRotation = leftEyeRotation;
-			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(Node.RightEye, NodeStatePropertyType.Orientation, OVRPlugin.Node.EyeRight, OVRPlugin.Step.Render, out rightEyeRotation))
+			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(UnityEngine.XR.XRNode.RightEye, NodeStatePropertyType.Orientation, OVRPlugin.Node.EyeRight, OVRPlugin.Step.Render, out rightEyeRotation))
 				rightEyeAnchor.localRotation = rightEyeRotation;
 		}
 
@@ -210,13 +210,13 @@ public class OVRCameraRig : MonoBehaviour
 			Quaternion leftQuat = Quaternion.identity;
 			Quaternion rightQuat = Quaternion.identity;
 
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.LeftHand, NodeStatePropertyType.Position, OVRPlugin.Node.HandLeft, OVRPlugin.Step.Render, out leftPos))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.LeftHand, NodeStatePropertyType.Position, OVRPlugin.Node.HandLeft, OVRPlugin.Step.Render, out leftPos))
 				leftHandAnchor.localPosition = leftPos;
-			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.RightHand, NodeStatePropertyType.Position, OVRPlugin.Node.HandRight, OVRPlugin.Step.Render, out rightPos))
+			if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.RightHand, NodeStatePropertyType.Position, OVRPlugin.Node.HandRight, OVRPlugin.Step.Render, out rightPos))
 				rightHandAnchor.localPosition = rightPos;
-			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(Node.LeftHand, NodeStatePropertyType.Orientation, OVRPlugin.Node.HandLeft, OVRPlugin.Step.Render, out leftQuat))
+			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(UnityEngine.XR.XRNode.LeftHand, NodeStatePropertyType.Orientation, OVRPlugin.Node.HandLeft, OVRPlugin.Step.Render, out leftQuat))
 				leftHandAnchor.localRotation = leftQuat;
-			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(Node.RightHand, NodeStatePropertyType.Orientation, OVRPlugin.Node.HandRight, OVRPlugin.Step.Render, out rightQuat))
+			if (OVRNodeStateProperties.GetNodeStatePropertyQuaternion(UnityEngine.XR.XRNode.RightHand, NodeStatePropertyType.Orientation, OVRPlugin.Node.HandRight, OVRPlugin.Step.Render, out rightQuat))
 				rightHandAnchor.localRotation = rightQuat;
 
 		}
@@ -234,8 +234,8 @@ public class OVRCameraRig : MonoBehaviour
 		OVRPose rightOffsetPose = OVRPose.identity;
 		if (OVRManager.loadedXRDevice == OVRManager.XRDevice.OpenVR)
 		{
-			leftOffsetPose = OVRManager.GetOpenVRControllerOffset(Node.LeftHand);
-			rightOffsetPose = OVRManager.GetOpenVRControllerOffset(Node.RightHand);
+			leftOffsetPose = OVRManager.GetOpenVRControllerOffset(UnityEngine.XR.XRNode.LeftHand);
+			rightOffsetPose = OVRManager.GetOpenVRControllerOffset(UnityEngine.XR.XRNode.RightHand);
 
 			//Sets poses of left and right nodes, local to the tracking space.
 			OVRManager.SetOpenVRLocalPose(trackingSpace.InverseTransformPoint(leftControllerAnchor.position),
@@ -383,8 +383,8 @@ public class OVRCameraRig : MonoBehaviour
 
 		OVRPose headPose;
 
-		headPose.position = InputTracking.GetLocalPosition(Node.Head);
-		headPose.orientation = InputTracking.GetLocalRotation(Node.Head);
+		headPose.position = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
+		headPose.orientation = UnityEngine.XR.InputTracking.GetLocalRotation(UnityEngine.XR.XRNode.Head);
 
 		OVRPose invHeadPose = headPose.Inverse();
 		Matrix4x4 invHeadMatrix = Matrix4x4.TRS(invHeadPose.position, invHeadPose.orientation, Vector3.one);

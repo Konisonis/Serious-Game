@@ -25,9 +25,9 @@ using InputTracking = UnityEngine.XR.InputTracking;
 using Node = UnityEngine.XR.XRNode;
 using Settings = UnityEngine.XR.XRSettings;
 #else
-using InputTracking = UnityEngine.VR.InputTracking;
-using Node = UnityEngine.VR.VRNode;
-using Settings = UnityEngine.VR.VRSettings;
+using InputTracking = UnityEngine.XR.InputTracking;
+using Node = UnityEngine.XR.XRNode;
+using Settings = UnityEngine.XR.XRSettings;
 #endif
 
 /// <summary>
@@ -457,7 +457,7 @@ public static class OVRInput
 				else if (OVRManager.loadedXRDevice == OVRManager.XRDevice.OpenVR)
 					return openVRControllerDetails[0].localPosition;
 				else
-					return InputTracking.GetLocalPosition(Node.LeftHand);
+					return UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.LeftHand);
 			case Controller.RTouch:
 			case Controller.RTrackedRemote:
 				if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)
@@ -465,7 +465,7 @@ public static class OVRInput
 				else if (OVRManager.loadedXRDevice == OVRManager.XRDevice.OpenVR)
 					return openVRControllerDetails[1].localPosition;
 				else
-					return InputTracking.GetLocalPosition(Node.RightHand);
+					return UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.RightHand);
 			default:
 				return Vector3.zero;
 		}
@@ -483,7 +483,7 @@ public static class OVRInput
 		{
 			case Controller.LTouch:
 			case Controller.LTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.LeftHand, NodeStatePropertyType.Velocity, OVRPlugin.Node.HandLeft, stepType, out velocity))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.LeftHand, NodeStatePropertyType.Velocity, OVRPlugin.Node.HandLeft, stepType, out velocity))
 				{
 					return velocity;
 				}
@@ -493,7 +493,7 @@ public static class OVRInput
 				}
 			case Controller.RTouch:
 			case Controller.RTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.RightHand, NodeStatePropertyType.Velocity, OVRPlugin.Node.HandRight, stepType, out velocity))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.RightHand, NodeStatePropertyType.Velocity, OVRPlugin.Node.HandRight, stepType, out velocity))
 				{
 					return velocity;
 				}
@@ -518,7 +518,7 @@ public static class OVRInput
 		{
 			case Controller.LTouch:
 			case Controller.LTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.LeftHand, NodeStatePropertyType.Acceleration, OVRPlugin.Node.HandLeft, stepType, out accel))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.LeftHand, NodeStatePropertyType.Acceleration, OVRPlugin.Node.HandLeft, stepType, out accel))
 				{
 					return accel;
 				}
@@ -528,7 +528,7 @@ public static class OVRInput
 				}
 			case Controller.RTouch:
 			case Controller.RTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.RightHand, NodeStatePropertyType.Acceleration, OVRPlugin.Node.HandRight, stepType, out accel))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.RightHand, NodeStatePropertyType.Acceleration, OVRPlugin.Node.HandRight, stepType, out accel))
 				{
 					return accel;
 				}
@@ -556,7 +556,7 @@ public static class OVRInput
 				else if (OVRManager.loadedXRDevice == OVRManager.XRDevice.OpenVR)
 					return openVRControllerDetails[0].localOrientation;
 				else
-					return InputTracking.GetLocalRotation(Node.LeftHand);
+					return UnityEngine.XR.InputTracking.GetLocalRotation(UnityEngine.XR.XRNode.LeftHand);
 			case Controller.RTouch:
 			case Controller.RTrackedRemote:
 				if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)
@@ -564,7 +564,7 @@ public static class OVRInput
 				else if (OVRManager.loadedXRDevice == OVRManager.XRDevice.OpenVR)
 					return openVRControllerDetails[1].localOrientation;
 				else
-					return InputTracking.GetLocalRotation(Node.RightHand);
+					return UnityEngine.XR.InputTracking.GetLocalRotation(UnityEngine.XR.XRNode.RightHand);
 			default:
 				return Quaternion.identity;
 		}
@@ -582,7 +582,7 @@ public static class OVRInput
 		{
 			case Controller.LTouch:
 			case Controller.LTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.LeftHand, NodeStatePropertyType.AngularVelocity, OVRPlugin.Node.HandLeft, stepType, out velocity))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.LeftHand, NodeStatePropertyType.AngularVelocity, OVRPlugin.Node.HandLeft, stepType, out velocity))
 				{
 					return velocity;
 				}
@@ -592,7 +592,7 @@ public static class OVRInput
 				}
 			case Controller.RTouch:
 			case Controller.RTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.RightHand, NodeStatePropertyType.AngularVelocity, OVRPlugin.Node.HandRight, stepType, out velocity))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.RightHand, NodeStatePropertyType.AngularVelocity, OVRPlugin.Node.HandRight, stepType, out velocity))
 				{
 					return velocity;
 				}
@@ -617,7 +617,7 @@ public static class OVRInput
 		{
 			case Controller.LTouch:
 			case Controller.LTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.LeftHand, NodeStatePropertyType.AngularAcceleration, OVRPlugin.Node.HandLeft, stepType, out accel))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.LeftHand, NodeStatePropertyType.AngularAcceleration, OVRPlugin.Node.HandLeft, stepType, out accel))
 				{
 					return accel;
 				}
@@ -627,7 +627,7 @@ public static class OVRInput
 				}
 			case Controller.RTouch:
 			case Controller.RTrackedRemote:
-				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(Node.RightHand, NodeStatePropertyType.AngularAcceleration, OVRPlugin.Node.HandRight, stepType, out accel))
+				if (OVRNodeStateProperties.GetNodeStatePropertyVector3(UnityEngine.XR.XRNode.RightHand, NodeStatePropertyType.AngularAcceleration, OVRPlugin.Node.HandRight, stepType, out accel))
 				{
 					return accel;
 				}
@@ -1253,9 +1253,9 @@ public static class OVRInput
 		return activeControllerType;
 	}
 
-	private static void StartVibration(float amplitude, float duration, Node controllerNode)
+	private static void StartVibration(float amplitude, float duration, UnityEngine.XR.XRNode controllerNode)
 	{
-		int index = (controllerNode == Node.LeftHand) ? 0 : 1;
+		int index = (controllerNode == UnityEngine.XR.XRNode.LeftHand) ? 0 : 1;
 		hapticInfos[index].hapticsDurationPlayed = 0.0f;
 		hapticInfos[index].hapticAmplitude = amplitude;
 		hapticInfos[index].hapticsDuration = duration;
@@ -1302,7 +1302,7 @@ public static class OVRInput
 		public float hapticsDurationPlayed;
 		public float hapticsDuration;
 		public float hapticAmplitude;
-		public Node node;
+		public UnityEngine.XR.XRNode node;
 	}
 
 	/// <summary>
@@ -1421,12 +1421,12 @@ public static class OVRInput
 		}
 	}
 
-	private static void PlayHapticImpulse(float amplitude, Node deviceNode)
+	private static void PlayHapticImpulse(float amplitude, UnityEngine.XR.XRNode deviceNode)
 	{
 		OVR.OpenVR.CVRSystem system = OVR.OpenVR.OpenVR.System;
 		if (system != null && amplitude != 0.0f)
 		{
-			uint controllerId = (deviceNode == Node.LeftHand) ? openVRControllerDetails[0].deviceID : openVRControllerDetails[1].deviceID;
+			uint controllerId = (deviceNode == UnityEngine.XR.XRNode.LeftHand) ? openVRControllerDetails[0].deviceID : openVRControllerDetails[1].deviceID;
 
 			if (IsValidOpenVRDevice(controllerId))
 				system.TriggerHapticPulse(controllerId, 0, (char)(OPENVR_MAX_HAPTIC_AMPLITUDE * amplitude));
@@ -1463,7 +1463,7 @@ public static class OVRInput
 		{
 			if (controllerMask == Controller.LTouch || controllerMask == Controller.RTouch)
 			{
-				Node controllerNode = (controllerMask == Controller.LTouch) ? Node.LeftHand : Node.RightHand;
+				UnityEngine.XR.XRNode controllerNode = (controllerMask == Controller.LTouch) ? UnityEngine.XR.XRNode.LeftHand : UnityEngine.XR.XRNode.RightHand;
 				StartVibration(amplitude, HAPTIC_VIBRATION_DURATION_SECONDS, controllerNode);
 			}
 		}

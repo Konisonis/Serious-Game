@@ -366,7 +366,7 @@ namespace Oculus.Platform
 #if UNITY_2017_3_OR_NEWER
         pi.SetCompatibleWithPlatform(BuildTarget.StandaloneOSX, false);
 #else
-        pi.SetCompatibleWithPlatform(BuildTarget.StandaloneOSXUniversal, false);
+        pi.SetCompatibleWithPlatform(BuildTarget.StandaloneOSX, false);
         pi.SetCompatibleWithPlatform(BuildTarget.StandaloneOSXIntel, false);
         pi.SetCompatibleWithPlatform(BuildTarget.StandaloneOSXIntel64, false);
 #endif

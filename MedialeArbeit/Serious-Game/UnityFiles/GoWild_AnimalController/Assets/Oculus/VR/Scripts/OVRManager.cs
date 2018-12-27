@@ -25,8 +25,8 @@ using UnityEditor;
 using Settings = UnityEngine.XR.XRSettings;
 using Node = UnityEngine.XR.XRNode;
 #else
-using Settings = UnityEngine.VR.VRSettings;
-using Node = UnityEngine.VR.VRNode;
+using Settings = UnityEngine.XR.XRSettings;
+using Node = UnityEngine.XR.XRNode;
 #endif
 
 /// <summary>
@@ -826,17 +826,17 @@ public class OVRManager : MonoBehaviour
 	/// Specifies the pose offset required to make an OpenVR controller's reported pose match the virtual pose.
 	/// Currently we only specify this offset for Oculus Touch on OpenVR.
 	/// </summary>
-	public static OVRPose GetOpenVRControllerOffset(Node hand)
+	public static OVRPose GetOpenVRControllerOffset(UnityEngine.XR.XRNode hand)
 	{
 		OVRPose poseOffset = OVRPose.identity;
-		if ((hand == Node.LeftHand || hand == Node.RightHand) && loadedXRDevice == XRDevice.OpenVR)
+		if ((hand == UnityEngine.XR.XRNode.LeftHand || hand == UnityEngine.XR.XRNode.RightHand) && loadedXRDevice == XRDevice.OpenVR)
 		{
-			int index = (hand == Node.LeftHand) ? 0 : 1;
+			int index = (hand == UnityEngine.XR.XRNode.LeftHand) ? 0 : 1;
 			if (OVRInput.openVRControllerDetails[index].controllerType == OVRInput.OpenVRController.OculusTouch)
 			{
-				Vector3 offsetOrientation = (hand == Node.LeftHand) ? OpenVRTouchRotationOffsetEulerLeft : OpenVRTouchRotationOffsetEulerRight;
+				Vector3 offsetOrientation = (hand == UnityEngine.XR.XRNode.LeftHand) ? OpenVRTouchRotationOffsetEulerLeft : OpenVRTouchRotationOffsetEulerRight;
 				poseOffset.orientation = Quaternion.Euler(offsetOrientation.x, offsetOrientation.y, offsetOrientation.z);
-				poseOffset.position = (hand == Node.LeftHand) ? OpenVRTouchPositionOffsetLeft : OpenVRTouchPositionOffsetRight;
+				poseOffset.position = (hand == UnityEngine.XR.XRNode.LeftHand) ? OpenVRTouchPositionOffsetLeft : OpenVRTouchPositionOffsetRight;
 			}
 		}
 		return poseOffset;
@@ -1213,9 +1213,9 @@ public class OVRManager : MonoBehaviour
 		{
 			loadedXRDevice = XRDevice.Oculus;
 		}
-		else if (Settings.enabled)
+		else if (UnityEngine.XR.XRSettings.enabled)
 		{
-			String loadedXRDeviceName = Settings.loadedDeviceName;
+			String loadedXRDeviceName = UnityEngine.XR.XRSettings.loadedDeviceName;
 			if (loadedXRDeviceName == OPENVR_UNITY_NAME_STR)
 				loadedXRDevice = XRDevice.OpenVR;
 			else
@@ -1448,21 +1448,21 @@ public class OVRManager : MonoBehaviour
 			recommendedViewportScale = Mathf.Clamp(recommendedViewportScale, minViewportScale, 1.0f);
 			UnityEngine.XR.XRSettings.renderViewportScale = recommendedViewportScale;
 #else
-			if (UnityEngine.VR.VRSettings.renderScale < maxRenderScale)
+			if (UnityEngine.XR.XRSettings.eyeTextureResolutionScale < maxRenderScale)
 			{
 				// Allocate renderScale to max to avoid re-allocation
-				UnityEngine.VR.VRSettings.renderScale = maxRenderScale;
+				UnityEngine.XR.XRSettings.eyeTextureResolutionScale = maxRenderScale;
 			}
 			else
 			{
 				// Adjusting maxRenderScale in case app started with a larger renderScale value
-				maxRenderScale = Mathf.Max(maxRenderScale, UnityEngine.VR.VRSettings.renderScale);
+				maxRenderScale = Mathf.Max(maxRenderScale, UnityEngine.XR.XRSettings.eyeTextureResolutionScale);
 			}
 			minRenderScale = Mathf.Min(minRenderScale, maxRenderScale);
-			float minViewportScale = minRenderScale / UnityEngine.VR.VRSettings.renderScale;
-			float recommendedViewportScale = OVRPlugin.GetEyeRecommendedResolutionScale() / UnityEngine.VR.VRSettings.renderScale;
+			float minViewportScale = minRenderScale / UnityEngine.XR.XRSettings.eyeTextureResolutionScale;
+			float recommendedViewportScale = OVRPlugin.GetEyeRecommendedResolutionScale() / UnityEngine.XR.XRSettings.eyeTextureResolutionScale;
 			recommendedViewportScale = Mathf.Clamp(recommendedViewportScale, minViewportScale, 1.0f);
-			UnityEngine.VR.VRSettings.renderViewportScale = recommendedViewportScale;
+			UnityEngine.XR.XRSettings.renderViewportScale = recommendedViewportScale;
 #endif
 		}
 #endif
