@@ -22,7 +22,8 @@ public class DogController : Controller{
         if (active)
         {
             var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
-            var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+            var trans = Input.GetAxis("Vertical") * speed;
+			Vector3 facingDirection = transform.TransformDirection (new Vector3 (0, trans, 0));
 
 			if (leftJoyCon != null && rightJoyCon != null) {
 				if (leftJoyCon.isWalking () && rightJoyCon.isWalking ()) {
@@ -32,12 +33,13 @@ public class DogController : Controller{
 			}
 
             transform.Rotate(0, 0, rot);
-            transform.Translate(0, trans, 0);
+            //transform.Translate(0, trans, 0);
+			GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
 
             if (Input.GetButtonDown("Jump") && canDig)
             {
                 Vector3 pos = target.GetComponent<Transform>().position;
-                pos.y += 0.1f;
+                pos.y += 0.5f;
                 target.GetComponent<Transform>().position = pos;
             }
         }
