@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: fcafc62b10698d54ab0eef756478ffc4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Dog_body001
+    100002: //RootNode
+    100004: Panther
+    100006: PantherHead
+    100008: PantherLLeg1
+    100010: PantherLLeg1 1
+    100012: PantherLLeg2
+    100014: PantherLLeg2 1
+    100016: PantherLLegCollarbone
+    100018: PantherLLegDigit11
+    100020: PantherLLegDigit12
+    100022: PantherLLegPalm
+    100024: PantherLLegPalm 1
+    100026: PantherLLegPlatform
+    100028: PantherLLegPlatform 1
+    100030: PantherNeck1
+    100032: PantherNeck2
+    100034: PantherNeck3
+    100036: PantherNeck4
+    100038: PantherNeck5
+    100040: PantherPelvis
+    100042: PantherRibcage
+    100044: PantherRLeg1
+    100046: PantherRLeg1 1
+    100048: PantherRLeg2
+    100050: PantherRLeg2 1
+    100052: PantherRLegDigit11
+    100054: PantherRLegDigit12
+    100056: PantherRLegPalm
+    100058: PantherRLegPalm 1
+    100060: PantherRLegPlatform
+    100062: PantherRLegPlatform 1
+    100064: PantherRLegShoulderblade
+    100066: PantherSpine1
+    100068: PantherSpine2
+    100070: PantherSpine3
+    100072: PantherSpine4
+    100074: PantherSpine5
+    100076: PantherSpine6
+    100078: PantherTail1
+    100080: PantherTail2
+    100082: PantherTail3
+    100084: PantherTail4
+    100086: PantherTail5
+    100088: PantherTail6
+    100090: PantherTail7
+    400000: Dog_body001
+    400002: //RootNode
+    400004: Panther
+    400006: PantherHead
+    400008: PantherLLeg1
+    400010: PantherLLeg1 1
+    400012: PantherLLeg2
+    400014: PantherLLeg2 1
+    400016: PantherLLegCollarbone
+    400018: PantherLLegDigit11
+    400020: PantherLLegDigit12
+    400022: PantherLLegPalm
+    400024: PantherLLegPalm 1
+    400026: PantherLLegPlatform
+    400028: PantherLLegPlatform 1
+    400030: PantherNeck1
+    400032: PantherNeck2
+    400034: PantherNeck3
+    400036: PantherNeck4
+    400038: PantherNeck5
+    400040: PantherPelvis
+    400042: PantherRibcage
+    400044: PantherRLeg1
+    400046: PantherRLeg1 1
+    400048: PantherRLeg2
+    400050: PantherRLeg2 1
+    400052: PantherRLegDigit11
+    400054: PantherRLegDigit12
+    400056: PantherRLegPalm
+    400058: PantherRLegPalm 1
+    400060: PantherRLegPlatform
+    400062: PantherRLegPlatform 1
+    400064: PantherRLegShoulderblade
+    400066: PantherSpine1
+    400068: PantherSpine2
+    400070: PantherSpine3
+    400072: PantherSpine4
+    400074: PantherSpine5
+    400076: PantherSpine6
+    400078: PantherTail1
+    400080: PantherTail2
+    400082: PantherTail3
+    400084: PantherTail4
+    400086: PantherTail5
+    400088: PantherTail6
+    400090: PantherTail7
+    2100000: 12228_Dog_v1_L2_Dog
+    4300000: Dog_body001
+    7400000: Wedeln
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Dog_body001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Wedeln
+      takeName: Wedeln
+      firstFrame: 10
+      lastFrame: 70
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: PantherPelvis
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
