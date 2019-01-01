@@ -24,10 +24,12 @@ public class DogController : Controller{
             var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
             var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-            if(leftJoyCon.isWalking() && rightJoyCon.isWalking()){
-                trans = 1 * Time.deltaTime * speed;
-                transform.Translate(0, trans, 0);
-            }
+			if (leftJoyCon != null && rightJoyCon != null) {
+				if (leftJoyCon.isWalking () && rightJoyCon.isWalking ()) {
+					trans = 1 * Time.deltaTime * speed;
+					transform.Translate (0, trans, 0);
+				}
+			}
 
             transform.Rotate(0, 0, rot);
             transform.Translate(0, trans, 0);
