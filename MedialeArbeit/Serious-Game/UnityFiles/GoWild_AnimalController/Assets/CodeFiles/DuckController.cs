@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DuckController : Controller {
 
-    public float speed, rotSpeed;
+    public float speed, rotSpeed, weight;
     public Transform grounddetector;
 
     private bool isGrounded;
@@ -24,12 +24,13 @@ public class DuckController : Controller {
             var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
             var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-            if(leftJoyCon.isWalking() && rightJoyCon.isWalking()){
-                trans = 1 * Time.deltaTime * speed;
-                transform.Translate(0, 0, trans);
-            }
-
-            rot = leftJoyCon.joycon.stick[0] * Time.deltaTime * rotSpeed;
+			if (leftJoyCon != null && rightJoyCon != null) {
+				if (leftJoyCon.isWalking () && rightJoyCon.isWalking ()) {
+					trans = 1 * Time.deltaTime * speed;
+					transform.Translate (0, 0, trans);
+				}
+				rot = leftJoyCon.joycon.stick[0] * Time.deltaTime * rotSpeed;
+			}
 
             transform.Rotate(0, rot, 0);
             transform.Translate(0, 0, trans);
@@ -39,7 +40,7 @@ public class DuckController : Controller {
                 GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0), ForceMode.Impulse);
             }
 
-            GetComponent<Rigidbody>().mass = 50 + GetComponent<Rigidbody>().position.y * 0.5f;
+            GetComponent<Rigidbody>().mass = weight + GetComponent<Rigidbody>().position.y * 0.5f;
         }
     }
 
