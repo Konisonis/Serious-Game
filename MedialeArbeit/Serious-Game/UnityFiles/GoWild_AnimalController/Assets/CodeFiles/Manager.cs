@@ -11,6 +11,10 @@ public class Manager : MonoBehaviour {
     private Camera[] cams;
     private int position, maxAnimals;
 
+    private AudioSource audioSource;
+    public AudioClip soundDog;
+    public AudioClip soundDuck;
+
 	void Start () {
         maxAnimals = 2;
 
@@ -23,6 +27,8 @@ public class Manager : MonoBehaviour {
         animals[1] = duck;
         camDuck.enabled = false;
         cams[1] = camDuck;
+
+        audioSource = GetComponent<AudioSource>();
 	}
 
 
@@ -43,10 +49,25 @@ public class Manager : MonoBehaviour {
     {
         animals[position].active = !animals[position].active;
         cams[position].enabled = !cams[position].enabled;
+        playAnimalSound();
     }
 
     public Controller getAnimal(int num)
     {
         return animals[num];
+    }
+
+    private void playAnimalSound()
+    {
+        switch (position)
+        {
+            case 0:
+                audioSource.clip = soundDog;
+                break;
+            case 1:
+                audioSource.clip = soundDuck;
+                break;
+        }
+        audioSource.Play();
     }
 }

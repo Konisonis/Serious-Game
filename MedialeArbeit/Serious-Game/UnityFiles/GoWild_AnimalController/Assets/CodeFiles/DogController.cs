@@ -13,9 +13,13 @@ public class DogController : Controller{
     public motionDetector leftJoyCon;
     public motionDetector rightJoyCon;
 
+    private AudioSource walksound;
+
 	void Start () {
         active = true;
         canDig = false;
+
+        walksound = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -35,6 +39,14 @@ public class DogController : Controller{
             transform.Rotate(0, 0, rot);
             //transform.Translate(0, trans, 0);
 			GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
+
+            // Sound of walking
+            if (trans > 0.5)
+            {
+                if (!walksound.isPlaying) walksound.Play(0);
+            }
+            else walksound.Stop();
+            // ----------------
 
             if (Input.GetButtonDown("Jump") && canDig)
             {
