@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 335ddece3ecdc65429be9bcabed22294
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GoWild.unity
     guid: 6c044e923cd43df48910b11135da7254
+  - enabled: 1
+    path: Assets/Scenes/WonderfulWorld.unity
+    guid: 9d07d2be19f7700479e5d0d4b12123c2
   m_configObjects: {}
