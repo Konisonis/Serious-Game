@@ -24,14 +24,12 @@ public class DogController : Controller{
 
         walksound = GetComponent<AudioSource>();
 
-		yCameraRotation = 180;
-		zCameraRotation = 0;
+		GetComponentInChildren<Camera> ().transform.Rotate(0f, 0f, 0f);
+		yCameraRotation = GetComponentInChildren<Camera> ().transform.eulerAngles.y;
+		zCameraRotation = GetComponentInChildren<Camera> ().transform.eulerAngles.x;
+
 		yNeckRotation = neckBone.transform.rotation.y;
 		zNeckRotation = neckBone.transform.rotation.z;
-
-		Mesh mesh = GetComponentInChildren<MeshFilter> ().mesh;
-		Debug.LogWarning(mesh.vertices);
-
 	}
 
 	void Update () {
@@ -86,7 +84,7 @@ public class DogController : Controller{
 		Vector3 cameraRotation = new Vector3 (zCameraRotation, yCameraRotation, 0f);
 		GetComponentInChildren<Camera> ().transform.eulerAngles = cameraRotation;
 
-		Vector3 neckRotation = new Vector3 (-yNeckRotation, 0f, -zNeckRotation);
+		Vector3 neckRotation = new Vector3 (0f, -yNeckRotation, -zNeckRotation);
 		neckBone.transform.localEulerAngles = neckRotation;
 	}
 
