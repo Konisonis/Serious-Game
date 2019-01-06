@@ -3,7 +3,13 @@ guid: d2444741f45eb422a82aca6343d95378
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - camDog: {instanceID: 0}
+  - camDuck: {instanceID: 0}
+  - dog: {instanceID: 0}
+  - duck: {instanceID: 0}
+  - soundDog: {fileID: 8300000, guid: 978fea198d834594f832d11e0cecf4de, type: 3}
+  - soundDuck: {fileID: 8300000, guid: 10350f088d4be3e498da15effc488b8f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

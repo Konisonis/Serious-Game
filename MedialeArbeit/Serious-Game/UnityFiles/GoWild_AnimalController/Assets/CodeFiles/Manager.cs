@@ -50,6 +50,7 @@ public class Manager : MonoBehaviour {
         animals[position].active = !animals[position].active;
         cams[position].enabled = !cams[position].enabled;
         playAnimalSound();
+        changeListener();
     }
 
     public Controller getAnimal(int num)
@@ -68,6 +69,21 @@ public class Manager : MonoBehaviour {
                 audioSource.clip = soundDuck;
                 break;
         }
-        audioSource.Play();
+        audioSource.Play(0);
+    }
+
+    private void changeListener()
+    {
+        switch (position)
+        {
+            case 0:
+                GameObject.Find("DuckCamera").GetComponent<AudioListener>().enabled = false;
+                GameObject.Find("DogCamera").GetComponent<AudioListener>().enabled = true;
+                break;
+            case 1:
+                GameObject.Find("DuckCamera").GetComponent<AudioListener>().enabled = true;
+                GameObject.Find("DogCamera").GetComponent<AudioListener>().enabled = false;
+                break;
+        }
     }
 }

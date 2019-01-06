@@ -21593,6 +21593,11 @@ Prefab:
       propertyPath: m_Depth
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 81615502624028014, guid: 0c53984bd89ec479e937988a297f5d22,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c53984bd89ec479e937988a297f5d22, type: 2}
   m_IsPrefabAsset: 0
@@ -31949,8 +31954,8 @@ MonoBehaviour:
   camDuck: {fileID: 1183939429}
   dog: {fileID: 2040010891}
   duck: {fileID: 947104763}
-  soundDog: {fileID: 0}
-  soundDuck: {fileID: 0}
+  soundDog: {fileID: 8300000, guid: 978fea198d834594f832d11e0cecf4de, type: 3}
+  soundDuck: {fileID: 8300000, guid: 10350f088d4be3e498da15effc488b8f, type: 3}
 --- !u!65 &1601182000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32026,7 +32031,8 @@ AudioSource:
   m_GameObject: {fileID: 1601181998}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 7fbfd3919eac2ed418bd5526755627e4,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.488
