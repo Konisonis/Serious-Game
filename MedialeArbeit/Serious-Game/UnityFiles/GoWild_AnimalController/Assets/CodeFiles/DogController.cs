@@ -53,8 +53,9 @@ public class DogController : Controller{
 			}
 		}
 
-		transform.Rotate(0, 0, rot);
-		GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
+		//transform.Rotate(0, 0, rot);
+		//GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
+		transform.position = transform.position + Camera.main.transform.forward * trans * Time.deltaTime;
 
 		// Sound of walking
 		if (trans > 0.5)
