@@ -876,6 +876,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a,
     type: 2}
   m_PrefabInternal: {fileID: 89667074}
+--- !u!1 &20299656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1469228846475394, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20299657}
+  m_Layer: 0
+  m_Name: PantherNeck2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20299657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4834232782455810, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20299656}
+  m_LocalRotation: {x: -0.000000019492887, y: 0.00000007386109, z: 0.21803589, w: 0.97594076}
+  m_LocalPosition: {x: -0.035005253, y: -0.000000024223327, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 28560895}
+  m_Father: {fileID: 1997261265}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &20718771
 Prefab:
   m_ObjectHideFlags: 0
@@ -1233,6 +1264,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 28535547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &28560894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1981623731945654, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28560895}
+  m_Layer: 0
+  m_Name: PantherNeck3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28560895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4563035721062898, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28560894}
+  m_LocalRotation: {x: -0.0000000034037824, y: -0.000000035182286, z: 0.09539728,
+    w: 0.9954393}
+  m_LocalPosition: {x: -0.035005275, y: -0.000000012111664, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 785802843}
+  m_Father: {fileID: 20299657}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &34438091
 Prefab:
   m_ObjectHideFlags: 0
@@ -1296,6 +1359,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4862178472220348, guid: a89eef680e28b83449e3a6ba46792fbe,
     type: 2}
   m_PrefabInternal: {fileID: 34438091}
+--- !u!1 &37734945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1275418136316556, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37734946}
+  m_Layer: 0
+  m_Name: PantherRibcage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37734946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4163504636768000, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 37734945}
+  m_LocalRotation: {x: 0.000000012318027, y: -0.000000053948273, z: 0.022807464, w: 0.9997399}
+  m_LocalPosition: {x: -0.0707224, y: 0.000000024223327, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 0.99999964}
+  m_Children:
+  - {fileID: 1055543949}
+  - {fileID: 1997261265}
+  - {fileID: 1088341431}
+  m_Father: {fileID: 1760394371}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &40250077
 Prefab:
   m_ObjectHideFlags: 0
@@ -1986,6 +2082,37 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &63725389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1605918200886876, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63725390}
+  m_Layer: 0
+  m_Name: PantherLLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63725390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4098217191858962, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63725389}
+  m_LocalRotation: {x: 0.0000019909164, y: 0.00090411055, z: 0.663747, w: 0.7479567}
+  m_LocalPosition: {x: -0.15954132, y: -0.000000006055832, z: 0}
+  m_LocalScale: {x: 1.0000008, y: 1, z: 1.0000004}
+  m_Children:
+  - {fileID: 469893951}
+  m_Father: {fileID: 1302722368}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &66595841 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471410, guid: bb660abd3b29d9f44866fd79795dbca4,
@@ -3520,6 +3647,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+--- !u!1 &133550143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1101014173207954, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133550144}
+  m_Layer: 0
+  m_Name: PantherTail4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &133550144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4665085299087168, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133550143}
+  m_LocalRotation: {x: -0.031928606, y: -0.18210848, z: -0.096385784, w: 0.9780219}
+  m_LocalPosition: {x: -0.05098804, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1.0000002, z: 0.9999999}
+  m_Children:
+  - {fileID: 940694885}
+  m_Father: {fileID: 179559169}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &136435698
 Prefab:
   m_ObjectHideFlags: 0
@@ -4691,6 +4849,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ebc45ba3ff076884e92c0f152cc3b98e,
     type: 2}
   m_PrefabInternal: {fileID: 1677776217}
+--- !u!1 &179559168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1132509475985924, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179559169}
+  m_Layer: 0
+  m_Name: PantherTail3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179559169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4912598983064326, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179559168}
+  m_LocalRotation: {x: -0.060033675, y: -0.174868, z: -0.057853192, w: 0.9810557}
+  m_LocalPosition: {x: -0.05098807, y: 0, z: -0.000000012111664}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.99999994}
+  m_Children:
+  - {fileID: 133550144}
+  m_Father: {fileID: 1506200349}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &183361823
 Prefab:
   m_ObjectHideFlags: 0
@@ -5232,6 +5421,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197142752}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &199250646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1706188069411220, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199250647}
+  m_Layer: 0
+  m_Name: PantherTail7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199250647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4722481957679338, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199250646}
+  m_LocalRotation: {x: -0.092794284, y: -0.15991312, z: -0.13062842, w: 0.9740397}
+  m_LocalPosition: {x: -0.050988045, y: -0.000000012111664, z: -0.000000024223327}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 432181561}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &200653001
 Prefab:
   m_ObjectHideFlags: 0
@@ -5512,6 +5731,36 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &215204770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1419414109972510, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215204771}
+  m_Layer: 0
+  m_Name: Panther
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &215204771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4994282365243872, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215204770}
+  m_LocalRotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &216374554
 Prefab:
   m_ObjectHideFlags: 0
@@ -5605,6 +5854,71 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b99e7dc1382e346a7f9789de00de5e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &223970117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1165132475294988, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223970118}
+  m_Layer: 0
+  m_Name: PantherPelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223970118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4266031643755694, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223970117}
+  m_LocalRotation: {x: 0.6960415, y: -0.12460469, z: -0.69604135, w: 0.12460469}
+  m_LocalPosition: {x: 0.000000063491974, y: 0.35676813, z: -0.23923874}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 1302722368}
+  - {fileID: 1511794427}
+  - {fileID: 1300842185}
+  - {fileID: 2125976803}
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &228848224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1132840037117076, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228848225}
+  m_Layer: 0
+  m_Name: PantherRLegPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &228848225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4461713851990240, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 228848224}
+  m_LocalRotation: {x: 0.000000019505, y: 0.000000027333604, z: -0.5348165, w: 0.84496826}
+  m_LocalPosition: {x: -0.14397007, y: 0, z: 0.000000006055832}
+  m_LocalScale: {x: 0.9999997, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 677005468}
+  m_Father: {fileID: 2032721508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &229365385
 GameObject:
   m_ObjectHideFlags: 0
@@ -8370,6 +8684,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010968662070, guid: 30b99e7dc1382e346a7f9789de00de5e,
     type: 2}
   m_PrefabInternal: {fileID: 348492376}
+--- !u!1 &350723974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1389631704102044, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 350723975}
+  m_Layer: 0
+  m_Name: PantherSpine3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &350723975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4585133967048994, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350723974}
+  m_LocalRotation: {x: -0.0000000024669977, y: -0.00000005023009, z: -0.026954733,
+    w: 0.99963665}
+  m_LocalPosition: {x: -0.07072239, y: 0, z: -5.7752913e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 1441101301}
+  m_Father: {fileID: 1981387382}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &352140521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 429508, guid: 9c74caa742791864f9c678287121e6c9,
@@ -10603,6 +10949,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a599334208ff9fb45ba8e05890a070a8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &432181560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1898423929961362, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432181561}
+  m_Layer: 0
+  m_Name: PantherTail6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &432181561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4326565447037132, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432181560}
+  m_LocalRotation: {x: -0.08488199, y: -0.16424993, z: 0.17799483, w: 0.96650654}
+  m_LocalPosition: {x: -0.050988045, y: 0, z: -0.000000024223327}
+  m_LocalScale: {x: 0.9999997, y: 1.0000002, z: 0.9999998}
+  m_Children:
+  - {fileID: 199250647}
+  m_Father: {fileID: 940694885}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &432318349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4300043664540614, guid: 3219ab1aa462fbc4ea2086852458e209,
@@ -11583,6 +11960,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc43437591afe2143bf04d10cb3d3e6a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &469893950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1208319762430876, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469893951}
+  m_Layer: 0
+  m_Name: PantherLLegPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469893951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4437666438599496, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 469893950}
+  m_LocalRotation: {x: -0.00006980619, y: -0.00011261551, z: -0.5349329, w: 0.8448945}
+  m_LocalPosition: {x: -0.14397006, y: 0.000000024223327, z: 0}
+  m_LocalScale: {x: 1.0000007, y: 0.99999934, z: 0.99999976}
+  m_Children:
+  - {fileID: 1839439732}
+  m_Father: {fileID: 63725390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &472130888
 Prefab:
   m_ObjectHideFlags: 0
@@ -12152,6 +12560,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc45ba3ff076884e92c0f152cc3b98e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &511541557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1445740876524404, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511541558}
+  m_Layer: 0
+  m_Name: PantherRLegPlatform 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511541558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4663701542340082, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 511541557}
+  m_LocalRotation: {x: 0.49683636, y: -0.49683622, z: -0.5031437, w: 0.5031439}
+  m_LocalPosition: {x: 0.068915054, y: 0.00000002811724, z: 0.16378336}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &511950321
 Prefab:
   m_ObjectHideFlags: 0
@@ -13361,6 +13799,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4355605263469582, guid: a599334208ff9fb45ba8e05890a070a8,
     type: 2}
   m_PrefabInternal: {fileID: 149113567}
+--- !u!1 &536866469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1812243573138914, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536866470}
+  m_Layer: 0
+  m_Name: PantherRLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536866470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4650235551743876, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536866469}
+  m_LocalRotation: {x: 0.0000000091522585, y: -0.000000010005843, z: 0.44625226, w: 0.89490724}
+  m_LocalPosition: {x: -0.039338343, y: -0.000000003027916, z: 0.000000006055832}
+  m_LocalScale: {x: 0.9999999, y: 0.9999996, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 677005468}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &539053705
 Prefab:
   m_ObjectHideFlags: 0
@@ -16044,6 +16512,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7479954, y: 2.3642044, z: 0.7637014}
   m_Center: {x: 0, y: 1.1821022, z: 0.000000059604638}
+--- !u!1 &677005467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1666103015756192, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677005468}
+  m_Layer: 0
+  m_Name: PantherRLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &677005468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4201987682162148, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 677005467}
+  m_LocalRotation: {x: 0.046243664, y: -0.022849912, z: -0.67824703, w: 0.73302144}
+  m_LocalPosition: {x: -0.10803914, y: -0.0016371093, z: -0.00469396}
+  m_LocalScale: {x: 0.9999996, y: 1.0000002, z: 0.9999997}
+  m_Children:
+  - {fileID: 536866470}
+  m_Father: {fileID: 228848225}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &677532022
 Prefab:
   m_ObjectHideFlags: 0
@@ -17354,93 +17853,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4355605263469582, guid: a599334208ff9fb45ba8e05890a070a8,
     type: 2}
   m_PrefabInternal: {fileID: 340178598}
---- !u!1001 &718979986
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 250.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 114.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 246.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.5243903
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.47435743
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.4743573
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5243901
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1785129815621724, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_Name
-      value: Dog
-      objectReference: {fileID: 0}
-    - target: {fileID: 114286069796214170, guid: 0227aa0bfe3c13d46a39ecddb8354062,
-        type: 2}
-      propertyPath: neckBone
-      value: 
-      objectReference: {fileID: 1997261265}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 84.26401
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0227aa0bfe3c13d46a39ecddb8354062, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &720174561
 Prefab:
   m_ObjectHideFlags: 0
@@ -19379,6 +19791,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4319235821863716, guid: b22ca612efded494f9e26580144fc935,
     type: 2}
   m_PrefabInternal: {fileID: 376420094}
+--- !u!1 &771839103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1205056456875704, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771839104}
+  m_Layer: 0
+  m_Name: PantherLLegPlatform 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771839104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4981857800926102, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771839103}
+  m_LocalRotation: {x: 0.5, y: -0.49999988, z: -0.5, w: 0.5000001}
+  m_LocalPosition: {x: -0.0735838, y: -0.0009651994, z: -0.24917401}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774259213
 GameObject:
   m_ObjectHideFlags: 0
@@ -20069,6 +20511,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4355605263469582, guid: a599334208ff9fb45ba8e05890a070a8,
     type: 2}
   m_PrefabInternal: {fileID: 784698042}
+--- !u!1 &785802842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1381064916024382, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785802843}
+  m_Layer: 0
+  m_Name: PantherNeck4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &785802843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4644205425767170, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785802842}
+  m_LocalRotation: {x: 0.000000004222807, y: 0.000000010578991, z: 0.020069918, w: 0.9997986}
+  m_LocalPosition: {x: -0.035005275, y: -0.000000024223327, z: -5.7752913e-15}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 1880789693}
+  m_Father: {fileID: 28560895}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791458993
 GameObject:
   m_ObjectHideFlags: 0
@@ -21239,6 +21712,181 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a599334208ff9fb45ba8e05890a070a8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &830369258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1785129815621724, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830369259}
+  - component: {fileID: 830369263}
+  - component: {fileID: 830369262}
+  - component: {fileID: 2040010891}
+  - component: {fileID: 830369261}
+  - component: {fileID: 830369260}
+  m_Layer: 0
+  m_Name: Dog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &830369259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4045290748252468, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830369258}
+  m_LocalRotation: {x: -0.5243903, y: 0.47435743, z: 0.4743573, w: 0.5243901}
+  m_LocalPosition: {x: 250.39, y: 114.83, z: 246.13}
+  m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
+  m_Children:
+  - {fileID: 1643391264}
+  - {fileID: 1533174590}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 84.26401}
+--- !u!82 &830369260
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 82469200460309150, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830369258}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 62805310e7d649e45a21f11425dd75fe, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.385
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &830369261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65450384708246622, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830369258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.07, y: 25.5, z: 28.03}
+  m_Center: {x: 0, y: 43.71, z: 0}
+--- !u!65 &830369262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65280206538814306, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830369258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 50, z: 30}
+  m_Center: {x: 0, y: 15.9, z: 14.6}
+--- !u!54 &830369263
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 54720959311296426, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830369258}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &830848373
 GameObject:
   m_ObjectHideFlags: 0
@@ -23513,6 +24161,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff67f0e1d0c3371468d6b37d84cc87d0, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &930097517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1210397704207980, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997261265}
+  m_Layer: 0
+  m_Name: PantherNeck1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &933094983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 53414ab72ac45614684af7a6985b2c85,
@@ -23723,6 +24387,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4875858384939068, guid: a9fed60a94acc7b4f98e730826ca1a43,
     type: 2}
   m_PrefabInternal: {fileID: 940538231}
+--- !u!1 &940694884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1516863339621258, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940694885}
+  m_Layer: 0
+  m_Name: PantherTail5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &940694885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4056201128802220, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940694884}
+  m_LocalRotation: {x: -0.034026783, y: -0.18172821, z: 0.107657626, w: 0.9768454}
+  m_LocalPosition: {x: -0.050988056, y: -0.000000024223327, z: 0.000000024223327}
+  m_LocalScale: {x: 1.0000001, y: 1.0000004, z: 1}
+  m_Children:
+  - {fileID: 432181561}
+  m_Father: {fileID: 133550144}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &942307210
 Prefab:
   m_ObjectHideFlags: 0
@@ -24025,6 +24720,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d422331347ce4e4aa0338e6a9f395ca, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &952756358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1731506955304236, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952756359}
+  m_Layer: 0
+  m_Name: PantherRLegPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &952756359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4829209554348248, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 952756358}
+  m_LocalRotation: {x: 0.5, y: -0.49999988, z: -0.5, w: 0.5000001}
+  m_LocalPosition: {x: 0.073573805, y: -0.0009628713, z: -0.24916431}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &955719926
 Prefab:
   m_ObjectHideFlags: 0
@@ -24925,6 +25650,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4150383395933128, guid: f5bc8dc288a1a374ba485ae082f34c63,
     type: 2}
   m_PrefabInternal: {fileID: 1166759918}
+--- !u!1 &996221156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1714437786873976, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996221157}
+  m_Layer: 0
+  m_Name: PantherLLegPalm 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &996221157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4171963756724892, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996221156}
+  m_LocalRotation: {x: -0.0000002095403, y: -0.0000007123413, z: -0.30737245, w: 0.9515893}
+  m_LocalPosition: {x: -0.124648735, y: 0, z: 0.000000006055832}
+  m_LocalScale: {x: 1.0000011, y: 0.9999992, z: 1.0000004}
+  m_Children: []
+  m_Father: {fileID: 1037668649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996264751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ff67f0e1d0c3371468d6b37d84cc87d0,
@@ -25763,6 +26518,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9824aa4f9e870ad41ab9472080959e6c,
     type: 2}
   m_PrefabInternal: {fileID: 996917757}
+--- !u!1 &1037668648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1790514610406272, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037668649}
+  m_Layer: 0
+  m_Name: PantherLLeg2 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037668649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4641291025757638, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037668648}
+  m_LocalRotation: {x: 0.0048253653, y: -0.010951888, z: -0.43295178, w: 0.9013376}
+  m_LocalPosition: {x: -0.14112525, y: -0.000000012111664, z: -0.00000003027916}
+  m_LocalScale: {x: 1.0000008, y: 0.99999857, z: 0.9999997}
+  m_Children:
+  - {fileID: 996221157}
+  m_Father: {fileID: 1378365019}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1037871399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d7f48023953f1d9419916436b34c62f9,
@@ -26154,6 +26940,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4319235821863716, guid: b22ca612efded494f9e26580144fc935,
     type: 2}
   m_PrefabInternal: {fileID: 600580934}
+--- !u!1 &1055543948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1407520807112254, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055543949}
+  m_Layer: 0
+  m_Name: PantherLLegCollarbone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055543949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4178571677139242, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1055543948}
+  m_LocalRotation: {x: 0.8795364, y: -0.4343551, z: -0.058765303, w: -0.1851972}
+  m_LocalPosition: {x: 0.04527471, y: -0.004098926, z: 0.033672757}
+  m_LocalScale: {x: 1.0000006, y: 1.0000006, z: 0.9999992}
+  m_Children:
+  - {fileID: 1378365019}
+  m_Father: {fileID: 37734946}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1055590532
 Prefab:
   m_ObjectHideFlags: 0
@@ -27046,6 +27863,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1081156418}
   m_Mesh: {fileID: 4300000, guid: 77a75d3bd4eec0249b0caa847b9f28ae, type: 3}
+--- !u!1 &1088341430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1592244259955174, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088341431}
+  m_Layer: 0
+  m_Name: PantherRLegShoulderblade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1088341431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4861368879188310, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1088341430}
+  m_LocalRotation: {x: 0.8795364, y: -0.43435517, z: 0.058765173, w: 0.18519716}
+  m_LocalPosition: {x: 0.04527471, y: -0.004098902, z: -0.03367275}
+  m_LocalScale: {x: 1.0000008, y: 1.0000007, z: 0.9999993}
+  m_Children:
+  - {fileID: 1692673376}
+  m_Father: {fileID: 37734946}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1091612896
 Prefab:
   m_ObjectHideFlags: 0
@@ -31550,6 +32398,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 510e8b094d51c0c448a1f47f52b71413, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1300842184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1595756162698732, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1300842185}
+  m_Layer: 0
+  m_Name: PantherSpine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1300842185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4687536205835630, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300842184}
+  m_LocalRotation: {x: -0.000000023488516, y: 0.00000008594317, z: -0.1339178, w: 0.9909925}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1981387382}
+  m_Father: {fileID: 223970118}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301352140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1056130293860944, guid: fc43437591afe2143bf04d10cb3d3e6a,
@@ -31625,11 +32504,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4875858384939068, guid: a9fed60a94acc7b4f98e730826ca1a43,
     type: 2}
   m_PrefabInternal: {fileID: 1787214676}
+--- !u!1 &1302722367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1607250658315924, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302722368}
+  m_Layer: 0
+  m_Name: PantherLLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302722368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4116164579906878, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1302722367}
+  m_LocalRotation: {x: 0.760805, y: -0.6472166, z: -0.009075134, w: -0.046947096}
+  m_LocalPosition: {x: 0.013313008, y: 0.0077255457, z: 0.042842407}
+  m_LocalScale: {x: 1, y: 0.9999997, z: 0.9999998}
+  m_Children:
+  - {fileID: 63725390}
+  m_Father: {fileID: 223970118}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1303004405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e26c36c102d821c4581a911b1e80588f,
     type: 2}
   m_PrefabInternal: {fileID: 1160894315}
+--- !u!1 &1303998719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1461442503953240, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303998720}
+  m_Layer: 0
+  m_Name: PantherRLeg2 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1303998720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4715690387850836, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303998719}
+  m_LocalRotation: {x: -0.00034556194, y: 0.0046234573, z: -0.4293841, w: 0.9031101}
+  m_LocalPosition: {x: -0.14112528, y: -0.000000036334992, z: 0.000000036334992}
+  m_LocalScale: {x: 1.0000006, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1605338817}
+  m_Father: {fileID: 1692673376}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1309989727
 Prefab:
   m_ObjectHideFlags: 0
@@ -31881,11 +32822,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3219ab1aa462fbc4ea2086852458e209, type: 2}
   m_IsPrefabAsset: 0
---- !u!20 &1314306499 stripped
+--- !u!20 &1314306499
 Camera:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 20600111379754668, guid: 0227aa0bfe3c13d46a39ecddb8354062,
     type: 2}
-  m_PrefabInternal: {fileID: 718979986}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977924623}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0.35573015, b: 0.8455882, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1001 &1315793149
 Prefab:
   m_ObjectHideFlags: 0
@@ -33409,6 +34386,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4355605263469582, guid: a599334208ff9fb45ba8e05890a070a8,
     type: 2}
   m_PrefabInternal: {fileID: 2029384290}
+--- !u!1 &1378365018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1563494174484304, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378365019}
+  m_Layer: 0
+  m_Name: PantherLLeg1 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378365019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4792936315626180, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378365018}
+  m_LocalRotation: {x: 0.012786052, y: 0.20919791, z: 0.72352237, w: 0.65771437}
+  m_LocalPosition: {x: -0.116933726, y: -0.000000048446655, z: 0.000000048446655}
+  m_LocalScale: {x: 1, y: 0.99999917, z: 1.0000011}
+  m_Children:
+  - {fileID: 1037668649}
+  m_Father: {fileID: 1055543949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1379880213
 Prefab:
   m_ObjectHideFlags: 0
@@ -33547,6 +34555,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4818851256704026, guid: cf666264ace7ab348aaa4003d8d0e6db,
     type: 2}
   m_PrefabInternal: {fileID: 1381147694}
+--- !u!1 &1381877382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1190439542830462, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381877383}
+  m_Layer: 0
+  m_Name: PantherSpine5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1381877383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4783302670705830, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381877382}
+  m_LocalRotation: {x: 0.0000000023959827, y: -0.000000022423542, z: 0.08256372, w: 0.9965858}
+  m_LocalPosition: {x: -0.07072239, y: -0.000000024223327, z: -2.8876456e-15}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 1760394371}
+  m_Father: {fileID: 1441101301}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1383301107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ebc45ba3ff076884e92c0f152cc3b98e,
@@ -34608,6 +35647,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1440669737}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1441101300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1453147781974770, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441101301}
+  m_Layer: 0
+  m_Name: PantherSpine4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441101301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4667664202913202, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1441101300}
+  m_LocalRotation: {x: 0.000000037658648, y: -0.00000001306151, z: -0.0034199855,
+    w: 0.99999416}
+  m_LocalPosition: {x: -0.07072239, y: -0.000000024223327, z: -2.8876456e-15}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000002}
+  m_Children:
+  - {fileID: 1381877383}
+  m_Father: {fileID: 350723975}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1441561982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4875858384939068, guid: a9fed60a94acc7b4f98e730826ca1a43,
@@ -35842,6 +36913,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4355605263469582, guid: a599334208ff9fb45ba8e05890a070a8,
     type: 2}
   m_PrefabInternal: {fileID: 428814575}
+--- !u!1 &1506200348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1646010342197620, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506200349}
+  m_Layer: 0
+  m_Name: PantherTail2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506200349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4104703340465412, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506200348}
+  m_LocalRotation: {x: -0.038666427, y: -0.18079787, z: 0.1748898, w: 0.96707326}
+  m_LocalPosition: {x: -0.050987974, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999976, y: 1.0000004, z: 1.0000001}
+  m_Children:
+  - {fileID: 179559169}
+  m_Father: {fileID: 2125976803}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1508023899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4300043664540614, guid: 3219ab1aa462fbc4ea2086852458e209,
@@ -35972,6 +37074,37 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1511794426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1260085988106792, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511794427}
+  m_Layer: 0
+  m_Name: PantherRLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1511794427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4965310133323400, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1511794426}
+  m_LocalRotation: {x: 0.7608245, y: -0.64723516, z: 0.008779311, w: 0.04643062}
+  m_LocalPosition: {x: 0.013312995, y: 0.0077255457, z: -0.0428424}
+  m_LocalScale: {x: 0.9999998, y: 0.9999995, z: 1}
+  m_Children:
+  - {fileID: 2032721508}
+  m_Father: {fileID: 223970118}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1511985529
 GameObject:
   m_ObjectHideFlags: 0
@@ -36071,6 +37204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516950771}
   - component: {fileID: 1516950770}
+  - component: {fileID: 1516950772}
   m_Layer: 0
   m_Name: Water4AdvancedReflectionDuckCamera
   m_TagString: Untagged
@@ -36124,13 +37258,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1516950769}
-  m_LocalRotation: {x: -0.3536425, y: 0.29667395, z: 0.11935642, w: 0.87901974}
-  m_LocalPosition: {x: 42.91533, y: -74.44293, z: 42.1277}
+  m_LocalRotation: {x: 0.00000016031241, y: 0.7415998, z: -0.000000105045125, w: -0.6708425}
+  m_LocalPosition: {x: 248.48259, y: -34.28689, z: 245.93842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!45 &1516950772
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1516950769}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1001 &1521608710
 Prefab:
   m_ObjectHideFlags: 0
@@ -36460,6 +37602,36 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!1 &1533174589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1335003387760992, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533174590}
+  m_Layer: 0
+  m_Name: Grounddetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533174590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4686700745347468, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1533174589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 39.07, z: 3.1}
+  m_LocalScale: {x: 17.696863, y: 31.187683, z: 47.95}
+  m_Children: []
+  m_Father: {fileID: 830369259}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1533283203
 Prefab:
   m_ObjectHideFlags: 0
@@ -38641,6 +39813,36 @@ Transform:
   m_Father: {fileID: 1165501387}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1605338816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1548979273298194, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1605338817}
+  m_Layer: 0
+  m_Name: PantherRLegPalm 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1605338817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4150577980055210, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605338816}
+  m_LocalRotation: {x: 0.0000023536136, y: 0.0000072171497, z: -0.30776852, w: 0.95146126}
+  m_LocalPosition: {x: -0.124648735, y: 0.000000012111664, z: 0}
+  m_LocalScale: {x: 1.0000005, y: 0.9999997, z: 0.99999976}
+  m_Children: []
+  m_Father: {fileID: 1303998720}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1607513638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 532066205bc320d4aa4647332e9d2ffa,
@@ -39458,6 +40660,77 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc45ba3ff076884e92c0f152cc3b98e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1643391263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1346609914627204, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643391264}
+  - component: {fileID: 1643391266}
+  - component: {fileID: 1643391265}
+  m_Layer: 0
+  m_Name: DogBodyAnimated
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643391264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4625173077078448, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643391263}
+  m_LocalRotation: {x: -0.0013626516, y: 0.7003373, z: 0.71381074, w: -0.00040355325}
+  m_LocalPosition: {x: 0.49614483, y: 1.4724686, z: -0.6777868}
+  m_LocalScale: {x: 62.44488, y: 62.444855, z: 62.44487}
+  m_Children:
+  - {fileID: 2074711911}
+  - {fileID: 215204771}
+  - {fileID: 2119532917}
+  - {fileID: 771839104}
+  - {fileID: 223970118}
+  - {fileID: 952756359}
+  - {fileID: 511541558}
+  m_Father: {fileID: 830369259}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -1.092, y: 92.144005, z: 359.921}
+--- !u!114 &1643391265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114005691949945632, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643391263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df278e1d2c8f164b886b1ac6b1fea6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1643391266}
+--- !u!95 &1643391266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 95585339022088136, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643391263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1774047f30ef1cf448f8e12f835b36e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1645598256
 Prefab:
   m_ObjectHideFlags: 0
@@ -40819,6 +42092,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 532066205bc320d4aa4647332e9d2ffa,
     type: 2}
   m_PrefabInternal: {fileID: 1875912172}
+--- !u!1 &1692673375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1621951308286124, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692673376}
+  m_Layer: 0
+  m_Name: PantherRLeg1 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1692673376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4796145667202390, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692673375}
+  m_LocalRotation: {x: -0.020189712, y: -0.19172117, z: 0.7270673, w: 0.658945}
+  m_LocalPosition: {x: -0.1169337, y: 0, z: -0.000000036334992}
+  m_LocalScale: {x: 1.0000001, y: 0.9999992, z: 1.0000012}
+  m_Children:
+  - {fileID: 1303998720}
+  m_Father: {fileID: 1088341431}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1700706025
 Prefab:
   m_ObjectHideFlags: 0
@@ -42400,6 +43704,38 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 68d490d7e81dbe44d9f367af8f06328f, type: 3}
+--- !u!1 &1760394370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1444909101771046, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760394371}
+  m_Layer: 0
+  m_Name: PantherSpine6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760394371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4742322206944664, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760394370}
+  m_LocalRotation: {x: 0.000000017146975, y: -0.0000000036145456, z: 0.031118963,
+    w: 0.9995157}
+  m_LocalPosition: {x: -0.07072239, y: 0, z: -5.7752913e-15}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
+  m_Children:
+  - {fileID: 37734946}
+  m_Father: {fileID: 1381877383}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1760405224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4768128869142888, guid: 7741b7a4903523a4baf11af0ccefe9be,
@@ -43680,6 +45016,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7479954, y: 2.3642044, z: 0.7637014}
   m_Center: {x: 0, y: 1.1821022, z: 0.000000059604638}
+--- !u!1 &1839439731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1137123740006824, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839439732}
+  m_Layer: 0
+  m_Name: PantherLLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1839439732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4073517237199880, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839439731}
+  m_LocalRotation: {x: -0.04592358, y: 0.022995224, z: -0.67816293, w: 0.7331148}
+  m_LocalPosition: {x: -0.10803912, y: -0.0016370851, z: 0.00469396}
+  m_LocalScale: {x: 1.0000007, y: 0.99999934, z: 1.0000001}
+  m_Children:
+  - {fileID: 2129273867}
+  m_Father: {fileID: 469893951}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1840121485
 Prefab:
   m_ObjectHideFlags: 0
@@ -44413,6 +45780,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5bc8dc288a1a374ba485ae082f34c63, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1880789692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1960989139929466, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880789693}
+  m_Layer: 0
+  m_Name: PantherNeck5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1880789693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4726422097372264, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880789692}
+  m_LocalRotation: {x: 0.000000026644475, y: -0.000000029390424, z: -0.15538779, w: 0.9878536}
+  m_LocalPosition: {x: -0.035005275, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 2081252467}
+  m_Father: {fileID: 785802843}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1880871330
 Prefab:
   m_ObjectHideFlags: 0
@@ -46923,6 +48321,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 532066205bc320d4aa4647332e9d2ffa,
     type: 2}
   m_PrefabInternal: {fileID: 81047059}
+--- !u!1 &1977924623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1181590398776704, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977924624}
+  - component: {fileID: 1314306499}
+  - component: {fileID: 1977924626}
+  - component: {fileID: 1977924625}
+  m_Layer: 0
+  m_Name: DogCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977924624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4018212440451344, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977924623}
+  m_LocalRotation: {x: -0.7062277, y: -0.00044822347, z: 0.70798326, w: -0.0014264912}
+  m_LocalPosition: {x: -0.04759767, y: -0.06913884, z: -0.0063675772}
+  m_LocalScale: {x: 0.05338044, y: 0.05338046, z: 0.053380467}
+  m_Children: []
+  m_Father: {fileID: 2081252467}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
+--- !u!81 &1977924625
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 81590613888215530, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977924623}
+  m_Enabled: 1
+--- !u!124 &1977924626
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 124425994962456858, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977924623}
+  m_Enabled: 1
 --- !u!1001 &1978184460
 Prefab:
   m_ObjectHideFlags: 0
@@ -47053,8 +48500,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1981278662}
-  m_LocalRotation: {x: -0.3536425, y: 0.29667395, z: 0.11935642, w: 0.87901974}
-  m_LocalPosition: {x: 42.91533, y: -74.44293, z: 42.1277}
+  m_LocalRotation: {x: 0.00000016031241, y: 0.7415998, z: -0.000000105045125, w: -0.6708425}
+  m_LocalPosition: {x: 248.48259, y: -34.28689, z: 245.93842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47068,6 +48515,37 @@ Skybox:
   m_GameObject: {fileID: 1981278662}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!1 &1981387381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1465190335004410, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981387382}
+  m_Layer: 0
+  m_Name: PantherSpine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1981387382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4093035078010922, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1981387381}
+  m_LocalRotation: {x: 0.00000001374589, y: 0.000000045503164, z: -0.06708187, w: 0.9977475}
+  m_LocalPosition: {x: -0.0707224, y: 0.000000024223327, z: 1.15505826e-14}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 350723975}
+  m_Father: {fileID: 1300842185}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1983876439
 Prefab:
   m_ObjectHideFlags: 0
@@ -47509,11 +48987,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 136e2c84bd2ca9b44ac27f8ac4a26714, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &1997261265 stripped
+--- !u!4 &1997261265
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4857225198212020, guid: 0227aa0bfe3c13d46a39ecddb8354062,
     type: 2}
-  m_PrefabInternal: {fileID: 718979986}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 930097517}
+  m_LocalRotation: {x: -0.000000017824334, y: 0.00000007238468, z: 0.19178414, w: 0.98143715}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 20299657}
+  m_Father: {fileID: 37734946}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1997348806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4150383395933128, guid: f5bc8dc288a1a374ba485ae082f34c63,
@@ -48612,6 +50100,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c50d7fe886123524b985153c4652c4bc, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2032721507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1816040499572966, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032721508}
+  m_Layer: 0
+  m_Name: PantherRLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032721508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4138192338172808, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032721507}
+  m_LocalRotation: {x: -0.000000059227578, y: 0.0000046017526, z: 0.6637329, w: 0.7479697}
+  m_LocalPosition: {x: -0.15954131, y: -0.000000006055832, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+  m_Children:
+  - {fileID: 228848225}
+  m_Father: {fileID: 1511794427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2033170166
 Prefab:
   m_ObjectHideFlags: 0
@@ -48737,12 +50256,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4385100409545138, guid: ba0e1358ea146214989b89135b2a4de9,
     type: 2}
   m_PrefabInternal: {fileID: 1740055695}
---- !u!114 &2040010891 stripped
+--- !u!114 &2040010891
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 114286069796214170, guid: 0227aa0bfe3c13d46a39ecddb8354062,
     type: 2}
-  m_PrefabInternal: {fileID: 718979986}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830369258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ff0b6cf15904653ae518f09fb65840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  speed: 15
+  rotSpeed: 70
+  grounddetector: {fileID: 1533174590}
+  leftJoyCon: {fileID: 0}
+  rightJoyCon: {fileID: 0}
+  neckBone: {fileID: 1997261265}
 --- !u!1 &2042726068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1879150461470046, guid: f111ce17a372a5b4390c68bcc42f9dbc,
@@ -49794,6 +51326,121 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ebc45ba3ff076884e92c0f152cc3b98e,
     type: 2}
   m_PrefabInternal: {fileID: 509140020}
+--- !u!1 &2074711910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1332410941069226, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074711911}
+  - component: {fileID: 2074711912}
+  m_Layer: 0
+  m_Name: Dog_body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074711911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4918357148090510, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074711910}
+  m_LocalRotation: {x: -0.34521502, y: 0.93446743, z: -0.026272003, w: -0.08310839}
+  m_LocalPosition: {x: -0.21008511, y: 0.5246189, z: 0.003934813}
+  m_LocalScale: {x: 0.6735633, y: 0.6735633, z: 0.7107516}
+  m_Children: []
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &2074711912
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 137747211383973602, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074711910}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: fcafc62b10698d54ab0eef756478ffc4, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: fcafc62b10698d54ab0eef756478ffc4, type: 3}
+  m_Bones:
+  - {fileID: 2081252467}
+  - {fileID: 37734946}
+  - {fileID: 1880789693}
+  - {fileID: 215204771}
+  - {fileID: 28560895}
+  - {fileID: 785802843}
+  - {fileID: 20299657}
+  - {fileID: 1997261265}
+  - {fileID: 1760394371}
+  - {fileID: 1381877383}
+  - {fileID: 469893951}
+  - {fileID: 1839439732}
+  - {fileID: 996221157}
+  - {fileID: 1037668649}
+  - {fileID: 1378365019}
+  - {fileID: 1441101301}
+  - {fileID: 1692673376}
+  - {fileID: 1055543949}
+  - {fileID: 350723975}
+  - {fileID: 1981387382}
+  - {fileID: 1300842185}
+  - {fileID: 1302722368}
+  - {fileID: 223970118}
+  - {fileID: 1303998720}
+  - {fileID: 2125976803}
+  - {fileID: 1511794427}
+  - {fileID: 1506200349}
+  - {fileID: 940694885}
+  - {fileID: 133550144}
+  - {fileID: 179559169}
+  - {fileID: 63725390}
+  - {fileID: 2032721508}
+  - {fileID: 432181561}
+  - {fileID: 677005468}
+  - {fileID: 228848225}
+  - {fileID: 1605338817}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 223970118}
+  m_AABB:
+    m_Center: {x: -0.26329058, y: 0.20941523, z: -0.052281957}
+    m_Extent: {x: 0.44635588, y: 0.2881526, z: 0.16199061}
+  m_DirtyAABB: 0
 --- !u!1001 &2076413696
 Prefab:
   m_ObjectHideFlags: 0
@@ -49875,6 +51522,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 35483354210b51844a7110a01c7b4f3a,
     type: 2}
   m_PrefabInternal: {fileID: 539053705}
+--- !u!1 &2081252466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1667367619615636, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081252467}
+  m_Layer: 0
+  m_Name: PantherHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2081252467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4528166135280578, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081252466}
+  m_LocalRotation: {x: -0.0000000029649514, y: -0.000000104777854, z: -0.4485393,
+    w: 0.8937631}
+  m_LocalPosition: {x: -0.035005227, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 1977924624}
+  m_Father: {fileID: 1880789693}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2081625913
 Prefab:
   m_ObjectHideFlags: 0
@@ -50428,6 +52107,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2117641694}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2119532916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1356965116370072, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119532917}
+  m_Layer: 0
+  m_Name: PantherLLegPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119532917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4796110271984196, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119532916}
+  m_LocalRotation: {x: 0.5031441, y: -0.50314397, z: -0.49683604, w: 0.49683616}
+  m_LocalPosition: {x: -0.05935873, y: 0.000000028117242, z: 0.16667145}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.99999976}
+  m_Children: []
+  m_Father: {fileID: 1643391264}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2121173839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 419418, guid: 785bfd81c9fb838469851c06eb415f7a,
@@ -50504,6 +52213,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 441142, guid: efa5e5878b1e1a644828ed0fbb1e73e6,
     type: 2}
   m_PrefabInternal: {fileID: 2123645283}
+--- !u!1 &2125976802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1225153476331542, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125976803}
+  m_Layer: 0
+  m_Name: PantherTail1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2125976803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4194013002473306, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125976802}
+  m_LocalRotation: {x: 0.18145241, y: -0.035468165, z: 0.9700106, w: 0.15778637}
+  m_LocalPosition: {x: 0.0236363, y: -0.015649093, z: -0.000000002790003}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_Children:
+  - {fileID: 1506200349}
+  m_Father: {fileID: 223970118}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2126943465
 Prefab:
   m_ObjectHideFlags: 0
@@ -50574,6 +52314,36 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!1 &2129273866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1593092711844762, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129273867}
+  m_Layer: 0
+  m_Name: PantherLLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2129273867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4987853594431862, guid: 0227aa0bfe3c13d46a39ecddb8354062,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2129273866}
+  m_LocalRotation: {x: -0.000000019576511, y: -9.1610136e-10, z: 0.44625232, w: 0.8949072}
+  m_LocalPosition: {x: -0.03933832, y: 0, z: -0.000000006055832}
+  m_LocalScale: {x: 1.0000006, y: 0.9999992, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 1839439732}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2134528853
 Prefab:
   m_ObjectHideFlags: 0
