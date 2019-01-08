@@ -7,6 +7,7 @@ public class Fly : MonoBehaviour {
 	public float horizontalSpeed = 0;
 	public float verticalSpeed = 1.5f;
 	public float amplitude = 0.5f;
+	public int initialPositionY = 0;
 
 	public Vector3 tempPosition;
 
@@ -18,7 +19,7 @@ public class Fly : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		tempPosition.x += horizontalSpeed;
-		tempPosition.y = 72 + Mathf.Sin(Time.realtimeSinceStartup * verticalSpeed) * amplitude;
+		tempPosition.y = initialPositionY + Mathf.Sin(Time.realtimeSinceStartup * verticalSpeed) * amplitude;
 		transform.position = tempPosition;
 	}
 }
