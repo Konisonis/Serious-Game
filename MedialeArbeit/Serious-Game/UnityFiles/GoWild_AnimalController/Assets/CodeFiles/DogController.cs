@@ -81,8 +81,8 @@ public class DogController : Controller{
 		zNeckRotation -= 2 * Input.GetAxis ("Mouse Y");
 
 
-		Vector3 cameraRotation = new Vector3 (zCameraRotation, yCameraRotation, 0f);
-		GetComponentInChildren<Camera> ().transform.eulerAngles = cameraRotation;
+		//Vector3 cameraRotation = new Vector3 (zCameraRotation, yCameraRotation, 0f);
+		//GetComponentInChildren<Camera> ().transform.eulerAngles = cameraRotation;
 
 		Vector3 neckRotation = new Vector3 (0f, -yNeckRotation, -zNeckRotation);
 		neckBone.transform.localEulerAngles = neckRotation;
