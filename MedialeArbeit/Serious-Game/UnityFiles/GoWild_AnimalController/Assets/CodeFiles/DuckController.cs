@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class DuckController : Controller {
 
@@ -12,9 +13,20 @@ public class DuckController : Controller {
     public motionDetector leftJoyCon;
     public motionDetector rightJoyCon;
 
+    public AudioMixer mixer;
+    public AudioSource[] sounds;
+    private AudioSource flap;
+    private AudioSource wind;
+    private AudioSource land;
+
     void Start()
     {
         active = false;
+
+        sounds = GetComponents<AudioSource>();
+        flap = sounds[0];
+        wind = sounds[1];
+        land = sounds[2];
     }
 
     private void FixedUpdate()
@@ -35,12 +47,24 @@ public class DuckController : Controller {
             transform.Rotate(0, rot, 0);
             transform.Translate(0, 0, trans);
 
+            Rigidbody rbody = GetComponent<Rigidbody>();
+
             if (Input.GetButtonDown("Jump"))
             {
-                GetComponent<Rigidbody>().AddForce(new Vector3(0, 100, 0), ForceMode.Impulse);
+                rbody.AddForce(new Vector3(0, 100, 0), ForceMode.Impulse);
+                playFlapSound();
             }
 
-            GetComponent<Rigidbody>().mass = weight + GetComponent<Rigidbody>().position.y * 0.5f;
+            float height = rbody.position.y;
+            float fallspeed = rbody.velocity.magnitude;
+            if (height < 0) height = 0;
+            rbody.mass = weight + height * 0.5f;
+
+            // Wind sound
+            float windVolume = (fallspeed * 1.2f) + (height * 0.6f) -70f;
+            if (windVolume > -10) windVolume = -10;
+            mixer.SetFloat("cutoff", 200 + fallspeed * 20f);
+            mixer.SetFloat("windvolume", windVolume);
         }
     }
 
@@ -50,5 +74,20 @@ public class DuckController : Controller {
         {
             Destroy(other.gameObject);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Hard landing
+        if (collision.relativeVelocity.magnitude > 20)
+        {
+            land.Play();
+        }
+    }
+
+    void playFlapSound()
+    {
+        flap.pitch = (Random.Range(0.9f, 1.1f));
+        flap.PlayOneShot(flap.clip, 0.8f);
     }
 }
