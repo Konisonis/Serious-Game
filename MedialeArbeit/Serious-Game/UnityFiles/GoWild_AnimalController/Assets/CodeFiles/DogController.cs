@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DogController : Controller{
 
-    public float speed, rotSpeed;
+    public float speed, rotSpeed, jumpForce;
     public Transform grounddetector;
+    private Vector3 groundDetecPos;
+    private Rigidbody rbody;
 
     private bool isGrounded, canDig;
     private GameObject target;
@@ -21,6 +23,8 @@ public class DogController : Controller{
 	void Start () {
         active = true;
         canDig = false;
+        rbody = GetComponent<Rigidbody>();
+
 
         walksound = GetComponent<AudioSource>();
 
@@ -35,8 +39,10 @@ public class DogController : Controller{
 	void Update () {
         if (active)
 		{
+            grounding();
 			move();
 			dig();
+            jump();
 			lookAround();
         }
     }
@@ -53,18 +59,26 @@ public class DogController : Controller{
 			}
 		}
 
-		//transform.Rotate(0, 0, rot);
-		//GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
-		transform.position = transform.position + Camera.main.transform.forward * trans * Time.deltaTime;
+        //transform.Rotate(0, 0, rot);
+        //GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
+        transform.position = transform.position + Camera.main.transform.forward * trans * Time.deltaTime;
 
-		// Sound of walking
-		if (trans > 0.5)
+        // Sound of walking
+        if (trans > 0.5)
 		{
 			if (!walksound.isPlaying) walksound.Play(0);
 		}
 		else walksound.Stop();
 		// ----------------
 	}
+
+    void jump()
+    {
+        if (Input.GetButtonDown("Jump") && !canDig && isGrounded)
+        {
+            rbody.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        }
+    }
 
 	void dig(){
 		if (Input.GetButtonDown("Jump") && canDig)
@@ -97,7 +111,15 @@ public class DogController : Controller{
 
     private void OnTriggerExit(Collider other)
     {
-        if (!canDig)
-            target = null;
+        canDig = false;
+        target = null;
+    }
+
+    void grounding()
+    {
+        groundDetecPos = grounddetector.transform.position;    
+        int layerMask = 1 << 8;
+        Collider[] found = Physics.OverlapSphere(groundDetecPos, 0.5f, layerMask);
+        isGrounded = found.Length > 0;
     }
 }
