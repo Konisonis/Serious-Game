@@ -18,8 +18,8 @@ public class motionDetector : MonoBehaviour {
 	public JoyconController joycon;
 	private Color joyConColor;
 
-	public bool walking;
-	public bool inWalkingOrientation;
+	public bool walking, digging;
+	public bool inWalkingOrientation, inDiggingOrientation;
 	public bool inGestureMode;
 
 	// Use this for initialization
@@ -31,6 +31,7 @@ public class motionDetector : MonoBehaviour {
 
 		stopTime = 0;
 		walking = false;
+		digging = false;
 	}
 	
 	void FixedUpdate () {				
@@ -40,37 +41,25 @@ public class motionDetector : MonoBehaviour {
 
 		if (joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_2)) {
 			inGestureMode = true;
-		}
-		if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2)) {
+		} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2)) {
 			inGestureMode = false;
 		}
 
+
 		if (inGestureMode) {
-			checkGestureOrientations ();
+
 		}
 		else{
 			rotateModel ();
-			checkGestureOrientations ();
+			setGestureOrientations ();
 		}
 
-
-		/*
-		if (!inWalkingOrientation) {
-			CancelInvoke ();
-			inWalkingOrientation = isInWalkingOrientation ();
-			if (inWalkingOrientation) {
-				InvokeRepeating ("checkSetOrientations", 3f, 3f);
-			}
-		}
-		*/
-
-		setJoyconColors ();
+		//setJoyconColors ();
 	}
 
-	private void checkGestureOrientations(){
-		inWalkingOrientation = (160 < rotationVector.y && rotationVector.y < 210) &&
-		(0 <= rotationVector.x && rotationVector.x < 50) || (340 < rotationVector.x && rotationVector.x <= 360) &&
-		(240 < rotationVector.z && rotationVector.z < 310);
+	private void setGestureOrientations(){
+		inWalkingOrientation = isInWalkingOrientation ();
+		inDiggingOrientation = isInDiggingOrientation ();
 	}
 
 	private void setJoyconColors (){
@@ -110,16 +99,36 @@ public class motionDetector : MonoBehaviour {
 		return (walking && inWalkingOrientation && inGestureMode);
 	}
 
+	// x zwischen 340 und 50; z zwischen 240 und 310; y ist egal
 	public bool isInWalkingOrientation(){
 		return(
-			(160 < joycon.rotation.y && joycon.rotation.y < 210) &&
-			(0 <= joycon.rotation.x && joycon.rotation.x < 50) || (340 < joycon.rotation.x && joycon.rotation.x <= 360) &&
+			((0 <= joycon.rotation.x && joycon.rotation.x < 50) || (340 < joycon.rotation.x && joycon.rotation.x <= 360)) &&
 			(240 < joycon.rotation.z && joycon.rotation.z < 310)
 		);
 	}
 
+	public bool isDigging(){
+		if((stopTime + elapsedTimeForHalt) < Time.time){
+			digging = false;
+		}
+		if (accelarationVector.z < zBottomMargin) {
+			stopTime = Time.time;
+			digging = true;
+		} else if (accelarationVector.z > zTopMargin) {
+			stopTime = Time.time;
+			digging = true;
+		} else {
 
-	public void checkSetOrientations(){
-		inWalkingOrientation = isInWalkingOrientation ();
+		}
+		return (digging && inDiggingOrientation && inGestureMode);
+	}
+
+	//x ist egal, y zwischen 130 und 240, z zwischen 311 und 70
+	//z zwischen 311 und 70
+	public bool isInDiggingOrientation(){
+		return(
+			(130 < joycon.rotation.y && joycon.rotation.y < 240) &&
+			((311 <= joycon.rotation.z && joycon.rotation.z < 360) || (0 <= joycon.rotation.z && joycon.rotation.z < 70) || (110 <= joycon.rotation.z && joycon.rotation.z < 230))
+		);
 	}
 }
