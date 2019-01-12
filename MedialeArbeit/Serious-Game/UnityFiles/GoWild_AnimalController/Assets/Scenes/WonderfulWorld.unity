@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -14037,8 +14037,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467333734}
-  m_LocalRotation: {x: 0.05042856, y: 0.94928014, z: 0.20734446, w: -0.23093836}
-  m_LocalPosition: {x: 384.69635, y: 21.812931, z: 101.20824}
+  m_LocalRotation: {x: 0.02561062, y: 0.54404604, z: 0.016632456, w: -0.83849955}
+  m_LocalPosition: {x: 340.10046, y: 8.959122, z: 361.23416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58557,7 +58557,7 @@ MonoBehaviour:
   rotSpeed: 70
   jumpForce: 500
   grounddetector: {fileID: 1533174590}
-  leftJoyCon: {fileID: 1717445528}
+  leftJoyCon: {fileID: 0}
   rightJoyCon: {fileID: 1053197178}
   neckBone: {fileID: 1997261265}
 --- !u!1 &2042726068 stripped
