@@ -78,6 +78,14 @@ public class DogController : Controller{
     }
 
 	void dig(){
+		if (leftJoyCon != null && rightJoyCon != null) {
+			if (leftJoyCon.isDigging () && rightJoyCon.isDigging () && canDig) {
+				Vector3 pos = target.GetComponent<Transform>().position;
+				pos.y += 0.05f;
+				target.GetComponent<Transform>().position = pos;
+			}
+		}
+
 		if (Input.GetButtonDown("Jump") && canDig)
 		{
 			Vector3 pos = target.GetComponent<Transform>().position;
