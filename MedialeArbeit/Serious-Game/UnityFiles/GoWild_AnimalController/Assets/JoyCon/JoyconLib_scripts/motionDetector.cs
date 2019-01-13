@@ -43,6 +43,7 @@ public class motionDetector : MonoBehaviour {
 			inGestureMode = true;
 		} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2)) {
 			inGestureMode = false;
+			joycon.joycon.Recenter ();
 		}
 
 
