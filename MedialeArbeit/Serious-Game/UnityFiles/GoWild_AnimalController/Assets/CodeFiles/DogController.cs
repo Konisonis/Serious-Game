@@ -123,7 +123,7 @@ public class DogController : Controller{
     void grounding()
     {
         groundDetecPos = grounddetector.transform.position;    
-        int layerMask = 1 << 8;
+        int layerMask = 1 << 0;
         Collider[] found = Physics.OverlapSphere(groundDetecPos, 0.5f, layerMask);
         isGrounded = found.Length > 0;
     }

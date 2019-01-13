@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class Controller : MonoBehaviour {
 
     public bool active;
+	public Transform bodyModel;
 }

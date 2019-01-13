@@ -9,12 +9,12 @@ public class ActivatorScrupt : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentTimeOfDay = timeController.GetComponent<Daynightcontroller>().currentTimeOfDay;
+		currentTimeOfDay = timeController.GetComponent<DayNightController>().currentTimeOfDay;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		currentTimeOfDay = timeController.GetComponent<Daynightcontroller>().currentTimeOfDay;
+		currentTimeOfDay = timeController.GetComponent<DayNightController>().currentTimeOfDay;
 		if (currentTimeOfDay < 0.27f || currentTimeOfDay >= 0.73f) {
 			gameObject.GetComponent<Light>().enabled = true;
 		} else {

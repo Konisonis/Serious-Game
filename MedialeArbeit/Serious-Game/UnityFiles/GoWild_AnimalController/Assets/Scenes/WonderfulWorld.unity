@@ -20603,8 +20603,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703471580}
-  m_LocalRotation: {x: 0.0009285558, y: 0.9934135, z: 0.11428828, w: -0.008184423}
-  m_LocalPosition: {x: 340.10046, y: 8.959122, z: 361.23413}
+  m_LocalRotation: {x: 0.3497511, y: 0.0070330226, z: 0.0026262733, w: -0.9368126}
+  m_LocalPosition: {x: 209.3537, y: 11.899727, z: 18.235209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25793,15 +25793,16 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830369258}
-  m_LocalRotation: {x: -0.6418541, y: -0.29668742, z: -0.29668742, w: 0.641854}
-  m_LocalPosition: {x: 269.55, y: 50.6, z: 392.92}
+  m_LocalRotation: {x: -0.6782542, y: 0.19992822, z: 0.19992825, w: 0.6782542}
+  m_LocalPosition: {x: 209.83, y: 50.6, z: 48.099327}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children:
   - {fileID: 1643391264}
   - {fileID: 1533174590}
+  - {fileID: 1977924624}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -49.616}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 32.848003}
 --- !u!82 &830369260
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25909,8 +25910,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.07, y: 25.5, z: 28.03}
-  m_Center: {x: 0, y: 43.71, z: 0}
+  m_Size: {x: 29.5, y: 50.1, z: 13.7}
+  m_Center: {x: 0, y: 44.1, z: -3.97}
 --- !u!65 &830369262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29081,12 +29082,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+  bodyModel: {fileID: 500496568}
   speed: 15
   rotSpeed: 50
   weight: 15
   grounddetector: {fileID: 0}
-  leftJoyCon: {fileID: 0}
-  rightJoyCon: {fileID: 0}
+  duckCamera: {fileID: 1183939429}
+  leftJoyCon: {fileID: 1257100193}
+  rightJoyCon: {fileID: 1053197178}
   mixer: {fileID: 24100000, guid: e49d635b620538840a6cc0accf04e138, type: 2}
   sounds: []
 --- !u!1 &948193231
@@ -36959,6 +36962,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1256733853}
   m_Mesh: {fileID: 4300004, guid: 92a5a5383e624784da2627a47a052328, type: 3}
+--- !u!114 &1257100193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114384520266965850, guid: 052c5d8f8fc4a4f18bdec13c642a9484,
+    type: 2}
+  m_PrefabInternal: {fileID: 1937069947}
+  m_Script: {fileID: 11500000, guid: 8d2f63a4cf7c34904827c2dddbbe73f2, type: 3}
 --- !u!1 &1258897077
 GameObject:
   m_ObjectHideFlags: 0
@@ -56201,21 +56210,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.27907366, y: 0.1311018, z: 0.20238413}
   m_Center: {x: -0.0000004767507, y: 0.0655509, z: -0.0029018782}
---- !u!54 &1927654074
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1927654069}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1927654075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57378,12 +57372,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1977924623}
-  m_LocalRotation: {x: -0.7062277, y: -0.00044822347, z: 0.70798326, w: -0.0014264912}
-  m_LocalPosition: {x: -0.04759767, y: -0.06913884, z: -0.0063675772}
-  m_LocalScale: {x: 0.05338044, y: 0.05338046, z: 0.053380467}
+  m_LocalRotation: {x: 0.00000008940693, y: 0.7071068, z: 0.7071068, w: 0.00000005960462}
+  m_LocalPosition: {x: 0.00007285011, y: 21.300055, z: 35.000023}
+  m_LocalScale: {x: 3.3333478, y: 3.3333368, z: 3.33335}
   m_Children: []
-  m_Father: {fileID: 2081252467}
-  m_RootOrder: 0
+  m_Father: {fileID: 830369259}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
 --- !u!81 &1977924625
 AudioListener:
@@ -59593,11 +59587,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+  bodyModel: {fileID: 1643391264}
   speed: 15
   rotSpeed: 70
   jumpForce: 500
   grounddetector: {fileID: 1533174590}
-  leftJoyCon: {fileID: 0}
+  leftJoyCon: {fileID: 1257100193}
   rightJoyCon: {fileID: 1053197178}
   neckBone: {fileID: 1997261265}
 --- !u!1 &2042726068 stripped
@@ -61056,8 +61051,7 @@ Transform:
     w: 0.8937631}
   m_LocalPosition: {x: -0.035005227, y: 0, z: 0}
   m_LocalScale: {x: 0.9999998, y: 1, z: 1.0000001}
-  m_Children:
-  - {fileID: 1977924624}
+  m_Children: []
   m_Father: {fileID: 1880789693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

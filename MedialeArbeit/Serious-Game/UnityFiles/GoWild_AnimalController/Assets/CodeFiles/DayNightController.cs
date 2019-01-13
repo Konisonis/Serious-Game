@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
  
-public class Daynightcontroller : MonoBehaviour {
+public class DayNightController : MonoBehaviour {
  
     public Light sun;
     public float secondsInFullDay = 240f;
