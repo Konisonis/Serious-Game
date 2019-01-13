@@ -42,9 +42,9 @@ public class motionDetector : MonoBehaviour {
 		accelarationVector.y = Mathf.Round((joycon.accel.y * joycon.accelMagnitude) * 1000);
 		accelarationVector.z = Mathf.Round((joycon.accel.z * joycon.accelMagnitude) * 1000);
 
-		if (joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_2)) {
+			if (joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_1)) {
 			inGestureMode = true;
-		} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2)) {
+			} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2)) {
 			inGestureMode = false;
 			joycon.joycon.Recenter ();
 		}
@@ -108,8 +108,8 @@ public class motionDetector : MonoBehaviour {
 	// x zwischen 340 und 50; z zwischen 240 und 310; y ist egal
 	public bool isInWalkingOrientation(){
 		return(
-			((0 <= joycon.rotation.x && joycon.rotation.x < 50) || (340 < joycon.rotation.x && joycon.rotation.x <= 360)) &&
-			(240 < joycon.rotation.z && joycon.rotation.z < 310)
+			((0 <= joycon.rotation.x && joycon.rotation.x < 50) || (300 < joycon.rotation.x && joycon.rotation.x <= 360)) &&
+			(210 < joycon.rotation.z && joycon.rotation.z < 310)
 		);
 	}
 
