@@ -34,7 +34,9 @@ public class motionDetector : MonoBehaviour {
 		digging = false;
 	}
 	
-	void FixedUpdate () {				
+	void FixedUpdate () {
+		if(joycon.joycon != null){
+			
 		accelarationVector.x = Mathf.Round((joycon.accel.x * joycon.accelMagnitude) * 1000);
 		accelarationVector.y = Mathf.Round((joycon.accel.y * joycon.accelMagnitude) * 1000);
 		accelarationVector.z = Mathf.Round((joycon.accel.z * joycon.accelMagnitude) * 1000);
@@ -56,6 +58,7 @@ public class motionDetector : MonoBehaviour {
 		}
 
 		//setJoyconColors ();
+		}
 	}
 
 	private void setGestureOrientations(){

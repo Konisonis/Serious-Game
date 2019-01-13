@@ -14043,8 +14043,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467333734}
-  m_LocalRotation: {x: 0.112705596, y: 0.42474294, z: 0.05340117, w: -0.8966824}
-  m_LocalPosition: {x: 295.29135, y: 23.334023, z: 380.0124}
+  m_LocalRotation: {x: -0.000000020711626, y: 0.90771866, z: 0.000000067645864, w: 0.41957942}
+  m_LocalPosition: {x: 271.01022, y: 29.589996, z: 391.67798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20504,8 +20504,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703471580}
-  m_LocalRotation: {x: 0.0009285558, y: 0.9934135, z: 0.11428828, w: -0.008184423}
-  m_LocalPosition: {x: 340.10046, y: 8.959122, z: 361.23413}
+  m_LocalRotation: {x: 0.036661897, y: -0.76117045, z: 0.043192446, w: 0.64607275}
+  m_LocalPosition: {x: 861.2942, y: -161.26764, z: 407.44083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -28986,8 +28986,9 @@ MonoBehaviour:
   rotSpeed: 50
   weight: 15
   grounddetector: {fileID: 0}
-  leftJoyCon: {fileID: 0}
-  rightJoyCon: {fileID: 0}
+  duckCamera: {fileID: 1183939429}
+  leftJoyCon: {fileID: 1257100193}
+  rightJoyCon: {fileID: 1053197178}
   mixer: {fileID: 24100000, guid: e49d635b620538840a6cc0accf04e138, type: 2}
   sounds: []
 --- !u!1 &948193231
@@ -36860,6 +36861,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1256733853}
   m_Mesh: {fileID: 4300004, guid: 92a5a5383e624784da2627a47a052328, type: 3}
+--- !u!114 &1257100193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114384520266965850, guid: 052c5d8f8fc4a4f18bdec13c642a9484,
+    type: 2}
+  m_PrefabInternal: {fileID: 1937069947}
+  m_Script: {fileID: 11500000, guid: 8d2f63a4cf7c34904827c2dddbbe73f2, type: 3}
 --- !u!1 &1258897077
 GameObject:
   m_ObjectHideFlags: 0
@@ -59498,7 +59505,7 @@ MonoBehaviour:
   rotSpeed: 70
   jumpForce: 500
   grounddetector: {fileID: 1533174590}
-  leftJoyCon: {fileID: 0}
+  leftJoyCon: {fileID: 1257100193}
   rightJoyCon: {fileID: 1053197178}
   neckBone: {fileID: 1997261265}
 --- !u!1 &2042726068 stripped
@@ -59554,7 +59561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sun: {fileID: 489310857}
   secondsInFullDay: 240
-  currentTimeOfDay: 0.553
+  currentTimeOfDay: 0.3
   timeMultiplier: 1
 --- !u!4 &2046303488
 Transform:
