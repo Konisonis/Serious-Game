@@ -32,7 +32,7 @@ public class Daynightcontroller : MonoBehaviour {
         float intensityMultiplier = 1;
         if (currentTimeOfDay <= 0.25f || currentTimeOfDay >= 0.80f) {
             intensityMultiplier = 0;
-			timeMultiplier = 2.75f;
+			timeMultiplier = 3.0f;
         }
         else if (currentTimeOfDay <= 0.27f) {
             intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.27f) * (1 / 0.02f));
