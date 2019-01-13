@@ -18,8 +18,8 @@ public class motionDetector : MonoBehaviour {
 	public JoyconController joycon;
 	private Color joyConColor;
 
-	public bool walking, digging;
-	public bool inWalkingOrientation, inDiggingOrientation;
+	public bool walking, digging, flying;
+	public bool inWalkingOrientation, inDiggingOrientation, inFlyingOrientation;
 	public bool inGestureMode;
 
 	// Use this for initialization
@@ -32,6 +32,7 @@ public class motionDetector : MonoBehaviour {
 		stopTime = 0;
 		walking = false;
 		digging = false;
+		flying = false;
 	}
 	
 	void FixedUpdate () {
@@ -64,6 +65,7 @@ public class motionDetector : MonoBehaviour {
 	private void setGestureOrientations(){
 		inWalkingOrientation = isInWalkingOrientation ();
 		inDiggingOrientation = isInDiggingOrientation ();
+		inFlyingOrientation = isInFlyingOrientation ();
 	}
 
 	private void setJoyconColors (){
@@ -133,6 +135,26 @@ public class motionDetector : MonoBehaviour {
 		return(
 			(130 < joycon.rotation.y && joycon.rotation.y < 240) &&
 			((311 <= joycon.rotation.z && joycon.rotation.z < 360) || (0 <= joycon.rotation.z && joycon.rotation.z < 70) || (110 <= joycon.rotation.z && joycon.rotation.z < 230))
+		);
+	}
+
+	public bool isFlying(){
+		if (accelarationVector.z < zBottomMargin) {
+			stopTime = Time.time;
+			flying = true;
+		} else {
+			flying = false;
+		}
+		return (flying && inFlyingOrientation && inGestureMode);
+	}
+
+	//x ist egal, y zwischen 50 und 129, z zwischen 311 und 70
+	//z zwischen 311 und 70
+	public bool isInFlyingOrientation(){
+		return(
+			((50 < joycon.rotation.y && joycon.rotation.y < 129) || (241 < joycon.rotation.y && joycon.rotation.y <= 360) ) &&
+			((311 <= joycon.rotation.z && joycon.rotation.z < 360) || (0 <= joycon.rotation.z && joycon.rotation.z < 70) || (110 <= joycon.rotation.z && joycon.rotation.z < 230))
+			|| isInDiggingOrientation()
 		);
 	}
 }

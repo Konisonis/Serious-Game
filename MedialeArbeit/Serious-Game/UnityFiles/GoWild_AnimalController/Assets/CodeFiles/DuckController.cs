@@ -61,8 +61,15 @@ public class DuckController : Controller {
 
 		if (Input.GetButtonDown("Jump"))
 		{
-			rbody.AddForce(new Vector3(0, 100, 0), ForceMode.Impulse);
+			rbody.AddForce(new Vector3(duckCamera.transform.forward.x * 10, 100, duckCamera.transform.forward.z * 10), ForceMode.Impulse);
 			playFlapSound();
+		}
+
+		if (leftJoyCon != null && rightJoyCon != null) {
+			if (leftJoyCon.isFlying () && rightJoyCon.isFlying ()) {
+				rbody.AddForce(new Vector3(duckCamera.transform.forward.x * 10, 70, duckCamera.transform.forward.z * 10), ForceMode.Impulse);
+				playFlapSound();
+			}
 		}
 
 		float height = rbody.position.y;

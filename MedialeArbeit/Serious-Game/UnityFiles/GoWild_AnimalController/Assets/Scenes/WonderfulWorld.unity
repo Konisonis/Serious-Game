@@ -14043,8 +14043,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467333734}
-  m_LocalRotation: {x: 0.000000024958378, y: 0.95919627, z: 0.000000019360055, w: -0.28274107}
-  m_LocalPosition: {x: 208.7902, y: 29.589996, z: 46.48882}
+  m_LocalRotation: {x: -0.113342926, y: 0.7034386, z: 0.11519239, w: 0.6921404}
+  m_LocalPosition: {x: -192.63504, y: -126.77228, z: 63.75052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20504,8 +20504,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703471580}
-  m_LocalRotation: {x: -0.000000020711626, y: 0.90771866, z: 0.000000067645864, w: 0.41957942}
-  m_LocalPosition: {x: 271.01022, y: 29.589996, z: 391.67798}
+  m_LocalRotation: {x: 0.3497511, y: 0.0070330226, z: 0.0026262733, w: -0.9368126}
+  m_LocalPosition: {x: 209.3537, y: 11.899727, z: 18.235209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25700,6 +25700,7 @@ Transform:
   m_Children:
   - {fileID: 1643391264}
   - {fileID: 1533174590}
+  - {fileID: 1977924624}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 32.848003}
@@ -57271,12 +57272,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1977924623}
-  m_LocalRotation: {x: -0.7062277, y: -0.00044822347, z: 0.70798326, w: -0.0014264912}
-  m_LocalPosition: {x: -0.04759767, y: -0.06913884, z: -0.0063675772}
-  m_LocalScale: {x: 0.05338044, y: 0.05338046, z: 0.053380467}
+  m_LocalRotation: {x: 0.00000008940693, y: 0.7071068, z: 0.7071068, w: 0.00000005960462}
+  m_LocalPosition: {x: 0.00007285011, y: 21.300055, z: 35.000023}
+  m_LocalScale: {x: 3.3333478, y: 3.3333368, z: 3.33335}
   m_Children: []
-  m_Father: {fileID: 2081252467}
-  m_RootOrder: 0
+  m_Father: {fileID: 830369259}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
 --- !u!81 &1977924625
 AudioListener:
@@ -60949,8 +60950,7 @@ Transform:
     w: 0.8937631}
   m_LocalPosition: {x: -0.035005227, y: 0, z: 0}
   m_LocalScale: {x: 0.9999998, y: 1, z: 1.0000001}
-  m_Children:
-  - {fileID: 1977924624}
+  m_Children: []
   m_Father: {fileID: 1880789693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
