@@ -14044,7 +14044,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467333734}
   m_LocalRotation: {x: -0.113342926, y: 0.7034386, z: 0.11519239, w: 0.6921404}
-  m_LocalPosition: {x: -192.63504, y: -126.77228, z: 63.75052}
+  m_LocalPosition: {x: 182.84323, y: 23.920258, z: 46.123524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -28983,6 +28983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+  bodyModel: {fileID: 500496568}
   speed: 15
   rotSpeed: 50
   weight: 15
@@ -59487,6 +59488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+  bodyModel: {fileID: 1643391264}
   speed: 15
   rotSpeed: 70
   jumpForce: 500
