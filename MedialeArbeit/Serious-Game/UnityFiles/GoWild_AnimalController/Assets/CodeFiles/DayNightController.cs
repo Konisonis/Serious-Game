@@ -31,7 +31,7 @@ public class DayNightController : MonoBehaviour {
  
         float intensityMultiplier = 1;
         if (currentTimeOfDay <= 0.25f || currentTimeOfDay >= 0.80f) {
-            intensityMultiplier = 0;
+            intensityMultiplier = 0.2f;
 			timeMultiplier = 3.0f;
         }
         else if (currentTimeOfDay <= 0.27f) {
