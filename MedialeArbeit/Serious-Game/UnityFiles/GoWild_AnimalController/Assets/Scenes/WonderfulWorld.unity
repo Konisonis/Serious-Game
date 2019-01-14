@@ -21850,8 +21850,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703471580}
-  m_LocalRotation: {x: 0.000000031533606, y: 0.69318867, z: -0.000000043800927, w: 0.72075623}
-  m_LocalPosition: {x: 246.09554, y: -34.210007, z: 242.94472}
+  m_LocalRotation: {x: -0.4016575, y: 0.06119723, z: 0.026912447, w: 0.9133465}
+  m_LocalPosition: {x: 244.58359, y: -44.97351, z: 231.61627}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27451,8 +27451,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 29.5, y: 50.1, z: 13.7}
-  m_Center: {x: 0, y: 44.1, z: -3.97}
+  m_Size: {x: 63.8, y: 74.2, z: 13.4}
+  m_Center: {x: 0, y: 63.6, z: -7.5}
 --- !u!65 &830369262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30768,6 +30768,7 @@ MonoBehaviour:
   rotSpeed: 50
   weight: 15
   grounddetector: {fileID: 0}
+  isGrounded: 0
   duckCamera: {fileID: 1183939429}
   leftJoyCon: {fileID: 1257100193}
   rightJoyCon: {fileID: 1053197178}
@@ -31771,6 +31772,46 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5baeb9358aafd8e4492c7bbd3428cd58, type: 3}
+--- !u!1 &993104891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993104893}
+  - component: {fileID: 993104892}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &993104892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993104891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42404f85f11a4446c87bdf28d085da8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &993104893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993104891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -95.54234, y: 58.245575, z: 202.34904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994083272
 GameObject:
   m_ObjectHideFlags: 0
@@ -62443,6 +62484,7 @@ MonoBehaviour:
   rotSpeed: 70
   jumpForce: 500
   grounddetector: {fileID: 1533174590}
+  canDig: 0
   leftJoyCon: {fileID: 1257100193}
   rightJoyCon: {fileID: 1053197178}
   neckBone: {fileID: 1997261265}
