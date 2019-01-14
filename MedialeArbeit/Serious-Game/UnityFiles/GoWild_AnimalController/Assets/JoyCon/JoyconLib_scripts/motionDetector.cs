@@ -139,7 +139,6 @@ public class motionDetector : MonoBehaviour {
 
 	public bool isFlying(){
 		if (accelarationVector.z < zBottomMargin) {
-			stopTime = Time.time;
 			flying = true;
 		} else {
 			flying = false;
