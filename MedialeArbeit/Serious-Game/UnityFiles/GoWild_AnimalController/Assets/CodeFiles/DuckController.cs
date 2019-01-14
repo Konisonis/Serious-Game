@@ -7,8 +7,9 @@ public class DuckController : Controller {
 
     public float speed, rotSpeed, weight;
     public Transform grounddetector;
+    private Vector3 groundDetecPos;
 
-    private bool isGrounded;
+    public bool isGrounded;
 
 	public Camera duckCamera;
 
@@ -37,6 +38,7 @@ public class DuckController : Controller {
         {
 			walk ();
 			fly ();
+            grounding();
         }
     }
 
@@ -105,5 +107,13 @@ public class DuckController : Controller {
     {
         flap.pitch = (Random.Range(0.9f, 1.1f));
         flap.PlayOneShot(flap.clip, 0.8f);
+    }
+
+    void grounding()
+    {
+        groundDetecPos = grounddetector.transform.position;
+        int layerMask = 1 << 0;
+        Collider[] found = Physics.OverlapSphere(groundDetecPos, 0.5f, layerMask);
+        isGrounded = found.Length > 0;
     }
 }

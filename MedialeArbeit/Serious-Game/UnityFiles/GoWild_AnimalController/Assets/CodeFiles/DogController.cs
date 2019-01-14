@@ -10,7 +10,8 @@ public class DogController : Controller{
     private Vector3 groundDetecPos;
     private Rigidbody rbody;
 
-    private bool isGrounded, canDig;
+    private bool isGrounded;
+    public bool canDig;
     private GameObject target;
 
     public motionDetector leftJoyCon;
