@@ -44,7 +44,7 @@ public class motionDetector : MonoBehaviour {
 
 			if (joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_1)) {
 			inGestureMode = true;
-			} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2)) {
+			} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_1)) {
 			inGestureMode = false;
 			joycon.joycon.Recenter ();
 		}
@@ -130,7 +130,6 @@ public class motionDetector : MonoBehaviour {
 	}
 
 	//x ist egal, y zwischen 130 und 240, z zwischen 311 und 70
-	//z zwischen 311 und 70
 	public bool isInDiggingOrientation(){
 		return(
 			(130 < joycon.rotation.y && joycon.rotation.y < 240) &&
@@ -152,7 +151,6 @@ public class motionDetector : MonoBehaviour {
 	//z zwischen 311 und 70
 	public bool isInFlyingOrientation(){
 		return(
-			((50 < joycon.rotation.y && joycon.rotation.y < 129) || (241 < joycon.rotation.y && joycon.rotation.y <= 360) ) &&
 			((311 <= joycon.rotation.z && joycon.rotation.z < 360) || (0 <= joycon.rotation.z && joycon.rotation.z < 70) || (110 <= joycon.rotation.z && joycon.rotation.z < 230))
 			|| isInDiggingOrientation()
 		);
