@@ -27,24 +27,29 @@ Ente schwimmen lassen
 
 Laufen und Fliegen funktioniert manchmal perfekt, manchmal gar nicht
 
-
+Funktioniert nicht mit Brille
 
 
 Fragebogen:
 
 - Hattest du Spaß?
-	- hat Spaß gemacht 
-	- 
+	- ja 5x
 - was hat dir gefallen
-	- Pyramide, fliegen falls es geht
-	- 
+	- Pyramide, fliegen wenn es geht
+	- erkunden, coole karte, abwechslungsreich
+	- richtungswechsel während laufen
+	- mehrere bewegungsarten
 - was hat dir nicht gefallen / Verbesserungsvorschläge
 	- fliegen
-	- 
+	- fliegen einfacher, besser auf bewegung eingehen
+	- flugsteuerung, lagg
+	- verzögerung
+	- hätte buddeln geklappt
 - ist dir schlecht geworden / übelkeit?
 	- ganz am anfang kurz
-	- 
-
-
+	- gar nicht 
+	- nein
+	- nein
+	- nein
 
  */
