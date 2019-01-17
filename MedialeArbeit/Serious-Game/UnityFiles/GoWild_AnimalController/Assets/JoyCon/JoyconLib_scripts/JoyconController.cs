@@ -38,7 +38,8 @@ public class JoyconController : MonoBehaviour {
             if (joycon.GetButtonDown(Joycon.Button.SHOULDER_1))
             {            
 				// Joycon has no magnetometer, so it cannot accurately determine its yaw value. Joycon.Recenter allows the user to reset the yaw value.
-				joycon.Recenter ();
+
+				//joycon.Recenter ();
 			}
 
             stick = joycon.GetStick();

@@ -18,8 +18,9 @@ public class motionDetector : MonoBehaviour {
 	public JoyconController joycon;
 	private Color joyConColor;
 
-	public bool walking;
-	public bool inWalkingOrientation;
+	public bool walking, digging, flying;
+	public bool inWalkingOrientation, inDiggingOrientation, inFlyingOrientation;
+	public bool inGestureMode;
 
 	// Use this for initialization
 	void Start () {
@@ -30,10 +31,52 @@ public class motionDetector : MonoBehaviour {
 
 		stopTime = 0;
 		walking = false;
+		digging = false;
+		flying = false;
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
+		if(joycon.joycon != null){
+			
+		accelarationVector.x = Mathf.Round((joycon.accel.x * joycon.accelMagnitude) * 1000);
+		accelarationVector.y = Mathf.Round((joycon.accel.y * joycon.accelMagnitude) * 1000);
+		accelarationVector.z = Mathf.Round((joycon.accel.z * joycon.accelMagnitude) * 1000);
+
+			if (joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonDown (Joycon.Button.SHOULDER_1)) {
+			inGestureMode = true;
+			} else if (joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_2) || joycon.joycon.GetButtonUp (Joycon.Button.SHOULDER_1)) {
+			inGestureMode = false;
+			joycon.joycon.Recenter ();
+		}
+
+
+		if (inGestureMode) {
+
+		}
+		else{
+			rotateModel ();
+			setGestureOrientations ();
+		}
+
+		//setJoyconColors ();
+		}
+	}
+
+	private void setGestureOrientations(){
+		inWalkingOrientation = isInWalkingOrientation ();
+		inDiggingOrientation = isInDiggingOrientation ();
+		inFlyingOrientation = isInFlyingOrientation ();
+	}
+
+	private void setJoyconColors (){
+		if(isWalking()){
+			GetComponent<Renderer>().material.color = Color.yellow;
+		}else{
+			GetComponent<Renderer>().material.color = joyConColor;
+		}
+	}
+
+	private void rotateModel(){
 		rotationVector.x = joycon.rotation.x;
 		rotationVector.y = joycon.rotation.y;
 		rotationVector.z = joycon.rotation.z;
@@ -44,24 +87,6 @@ public class motionDetector : MonoBehaviour {
 		rotationVector.x = Mathf.Round (rotationVector.x);
 		rotationVector.y = Mathf.Round (rotationVector.y);
 		rotationVector.z = Mathf.Round (rotationVector.z);
-				
-		accelarationVector.x = Mathf.Round((joycon.accel.x * joycon.accelMagnitude) * 1000);
-		accelarationVector.y = Mathf.Round((joycon.accel.y * joycon.accelMagnitude) * 1000);
-		accelarationVector.z = Mathf.Round((joycon.accel.z * joycon.accelMagnitude) * 1000);
-
-		if (!inWalkingOrientation) {
-			CancelInvoke ();
-			inWalkingOrientation = isInWalkingOrientation ();
-			if (inWalkingOrientation) {
-				InvokeRepeating ("checkSetOrientations", 3f, 3f);
-			}
-		}
-
-		if(isWalking()){
-			GetComponent<Renderer>().material.color = Color.yellow;
-		}else{
-			GetComponent<Renderer>().material.color = joyConColor;
-		}
 	}
 
 	public bool isWalking(){
@@ -77,19 +102,56 @@ public class motionDetector : MonoBehaviour {
 		} else {
 		
 		}
-		return (walking && inWalkingOrientation);
+		return (walking && inWalkingOrientation && inGestureMode);
 	}
 
+	// x zwischen 340 und 50; z zwischen 240 und 310; y ist egal
 	public bool isInWalkingOrientation(){
 		return(
-			(160 < joycon.rotation.y && joycon.rotation.y < 210) &&
-			(0 <= joycon.rotation.x && joycon.rotation.x < 50) || (340 < joycon.rotation.x && joycon.rotation.x <= 360) &&
-			(240 < joycon.rotation.z && joycon.rotation.z < 310)
+			((0 <= joycon.rotation.x && joycon.rotation.x < 50) || (300 < joycon.rotation.x && joycon.rotation.x <= 360)) &&
+			(210 < joycon.rotation.z && joycon.rotation.z < 310)
 		);
 	}
 
+	public bool isDigging(){
+		if((stopTime + elapsedTimeForHalt) < Time.time){
+			digging = false;
+		}
+		if (accelarationVector.z < zBottomMargin) {
+			stopTime = Time.time;
+			digging = true;
+		} else if (accelarationVector.z > zTopMargin) {
+			stopTime = Time.time;
+			digging = true;
+		} else {
 
-	public void checkSetOrientations(){
-		inWalkingOrientation = isInWalkingOrientation ();
+		}
+		return (digging && inDiggingOrientation && inGestureMode);
+	}
+
+	//x ist egal, y zwischen 130 und 240, z zwischen 311 und 70
+	public bool isInDiggingOrientation(){
+		return(
+			(130 < joycon.rotation.y && joycon.rotation.y < 240) &&
+			((311 <= joycon.rotation.z && joycon.rotation.z < 360) || (0 <= joycon.rotation.z && joycon.rotation.z < 70) || (110 <= joycon.rotation.z && joycon.rotation.z < 230))
+		);
+	}
+
+	public bool isFlying(){
+		if (accelarationVector.z < zBottomMargin) {
+			flying = true;
+		} else {
+			flying = false;
+		}
+		return (flying && inFlyingOrientation && inGestureMode);
+	}
+
+	//x ist egal, y zwischen 50 und 129, z zwischen 311 und 70
+	//z zwischen 311 und 70
+	public bool isInFlyingOrientation(){
+		return(
+			((311 <= joycon.rotation.z && joycon.rotation.z < 360) || (0 <= joycon.rotation.z && joycon.rotation.z < 70) || (110 <= joycon.rotation.z && joycon.rotation.z < 230))
+			|| isInDiggingOrientation()
+		);
 	}
 }

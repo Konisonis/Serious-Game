@@ -28,6 +28,7 @@ public class Manager : MonoBehaviour {
         camDuck.enabled = false;
         cams[1] = camDuck;
 
+		animals [position].bodyModel.gameObject.SetActive (false);
         audioSource = GetComponent<AudioSource>();
 	}
 
@@ -48,6 +49,7 @@ public class Manager : MonoBehaviour {
     private void switchState()
     {
         animals[position].active = !animals[position].active;
+		animals [position].bodyModel.gameObject.SetActive (!animals [position].active);
         cams[position].enabled = !cams[position].enabled;
         playAnimalSound();
         changeListener();

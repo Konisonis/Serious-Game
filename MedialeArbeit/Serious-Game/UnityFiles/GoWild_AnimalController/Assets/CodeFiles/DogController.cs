@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class DogController : Controller{
 
-    public float speed, rotSpeed;
+    public float speed, rotSpeed, jumpForce;
     public Transform grounddetector;
+    private Vector3 groundDetecPos;
+    private Rigidbody rbody;
 
-    private bool isGrounded, canDig;
+    private bool isGrounded;
+    public bool canDig;
     private GameObject target;
 
     public motionDetector leftJoyCon;
@@ -21,12 +25,9 @@ public class DogController : Controller{
 	void Start () {
         active = true;
         canDig = false;
+        rbody = GetComponent<Rigidbody>();
 
         walksound = GetComponent<AudioSource>();
-
-		GetComponentInChildren<Camera> ().transform.Rotate(0f, 0f, 0f);
-		yCameraRotation = GetComponentInChildren<Camera> ().transform.eulerAngles.y;
-		zCameraRotation = GetComponentInChildren<Camera> ().transform.eulerAngles.x;
 
 		yNeckRotation = neckBone.transform.rotation.y;
 		zNeckRotation = neckBone.transform.rotation.z;
@@ -35,9 +36,12 @@ public class DogController : Controller{
 	void Update () {
         if (active)
 		{
+            grounding();
 			move();
 			dig();
-			lookAround();
+            jump();
+			//if(!UnityEngine.XR.XRSettings.enabled)
+				//lookAround();
         }
     }
 
@@ -48,25 +52,41 @@ public class DogController : Controller{
 
 		if (leftJoyCon != null && rightJoyCon != null) {
 			if (leftJoyCon.isWalking () && rightJoyCon.isWalking ()) {
-				trans = 1 * Time.deltaTime * speed;
-				transform.Translate (0, trans, 0);
+				trans = speed;
 			}
 		}
 
-		//transform.Rotate(0, 0, rot);
-		//GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime);
-		transform.position = transform.position + Camera.main.transform.forward * trans * Time.deltaTime;
+		transform.Rotate(0, 0, rot); //manual rotation
+		//GetComponent<Rigidbody>().MovePosition(transform.position + facingDirection * Time.deltaTime); //old movement
 
-		// Sound of walking
+		transform.position = transform.position + new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z) * trans * Time.deltaTime;
+
+		// walking triggers
 		if (trans > 0.5)
 		{
+			//rotate body
 			if (!walksound.isPlaying) walksound.Play(0);
 		}
 		else walksound.Stop();
-		// ----------------
 	}
 
+    void jump()
+    {
+        if (Input.GetButtonDown("Jump") && !canDig && isGrounded)
+        {
+            rbody.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        }
+    }
+
 	void dig(){
+		if (leftJoyCon != null && rightJoyCon != null) {
+			if (leftJoyCon.isDigging () && rightJoyCon.isDigging () && canDig) {
+				Vector3 pos = target.GetComponent<Transform>().position;
+				pos.y += 0.05f;
+				target.GetComponent<Transform>().position = pos;
+			}
+		}
+
 		if (Input.GetButtonDown("Jump") && canDig)
 		{
 			Vector3 pos = target.GetComponent<Transform>().position;
@@ -82,11 +102,11 @@ public class DogController : Controller{
 		zNeckRotation -= 2 * Input.GetAxis ("Mouse Y");
 
 
-		//Vector3 cameraRotation = new Vector3 (zCameraRotation, yCameraRotation, 0f);
-		//GetComponentInChildren<Camera> ().transform.eulerAngles = cameraRotation;
+		Vector3 cameraRotation = new Vector3 (zCameraRotation, yCameraRotation, 0f);
+		GetComponentInChildren<Camera> ().transform.eulerAngles = cameraRotation;
 
-		Vector3 neckRotation = new Vector3 (0f, -yNeckRotation, -zNeckRotation);
-		neckBone.transform.localEulerAngles = neckRotation;
+		//Vector3 neckRotation = new Vector3 (0f, -yNeckRotation, -zNeckRotation);
+		//neckBone.transform.localEulerAngles = neckRotation;
 	}
 
     void OnTriggerEnter(Collider other)
@@ -97,7 +117,15 @@ public class DogController : Controller{
 
     private void OnTriggerExit(Collider other)
     {
-        if (!canDig)
-            target = null;
+        canDig = false;
+        target = null;
+    }
+
+    void grounding()
+    {
+        groundDetecPos = grounddetector.transform.position;    
+        int layerMask = 1 << 0;
+        Collider[] found = Physics.OverlapSphere(groundDetecPos, 0.5f, layerMask);
+        isGrounded = found.Length > 0;
     }
 }

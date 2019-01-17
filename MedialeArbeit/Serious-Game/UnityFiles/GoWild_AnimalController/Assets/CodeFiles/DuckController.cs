@@ -7,8 +7,11 @@ public class DuckController : Controller {
 
     public float speed, rotSpeed, weight;
     public Transform grounddetector;
+    private Vector3 groundDetecPos;
 
-    private bool isGrounded;
+    public bool isGrounded;
+
+	public Camera duckCamera;
 
     public motionDetector leftJoyCon;
     public motionDetector rightJoyCon;
@@ -33,40 +36,55 @@ public class DuckController : Controller {
     {
         if (active)
         {
-            var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
-            var trans = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-
-			if (leftJoyCon != null && rightJoyCon != null) {
-				if (leftJoyCon.isWalking () && rightJoyCon.isWalking ()) {
-					trans = 1 * Time.deltaTime * speed;
-					transform.Translate (0, 0, trans);
-				}
-				rot = leftJoyCon.joycon.stick[0] * Time.deltaTime * rotSpeed;
-			}
-
-            transform.Rotate(0, rot, 0);
-            transform.Translate(0, 0, trans);
-
-            Rigidbody rbody = GetComponent<Rigidbody>();
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                rbody.AddForce(new Vector3(0, 100, 0), ForceMode.Impulse);
-                playFlapSound();
-            }
-
-            float height = rbody.position.y;
-            float fallspeed = rbody.velocity.magnitude;
-            if (height < 0) height = 0;
-            rbody.mass = weight + height * 0.5f;
-
-            // Wind sound
-            float windVolume = (fallspeed * 1.2f) + (height * 0.6f) -70f;
-            if (windVolume > -10) windVolume = -10;
-            mixer.SetFloat("cutoff", 200 + fallspeed * 20f);
-            mixer.SetFloat("windvolume", windVolume);
+			walk ();
+			fly ();
+            grounding();
         }
     }
+
+	private void walk(){
+		var rot = Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed;
+		var trans = Input.GetAxis("Vertical") * speed;
+		Vector3 facingDirection = transform.TransformDirection (new Vector3 (0, trans, 0));
+
+		if (leftJoyCon != null && rightJoyCon != null) {
+			if (leftJoyCon.isWalking () && rightJoyCon.isWalking ()) {
+				trans = speed;
+			}
+			//rot = leftJoyCon.joycon.stick[0] * Time.deltaTime * rotSpeed;
+		}
+
+		transform.Rotate(0, rot, 0);
+		transform.position = transform.position + new Vector3(duckCamera.transform.forward.x, 0f, duckCamera.transform.forward.z) * trans * Time.deltaTime;
+	}
+
+	private void fly(){
+		Rigidbody rbody = GetComponent<Rigidbody>();
+
+		if (Input.GetButtonDown("Jump"))
+		{
+			rbody.AddForce(new Vector3(duckCamera.transform.forward.x * 10, 100, duckCamera.transform.forward.z * 10), ForceMode.Impulse);
+			playFlapSound();
+		}
+
+		if (leftJoyCon != null && rightJoyCon != null) {
+			if (leftJoyCon.isFlying () && rightJoyCon.isFlying ()) {
+				rbody.AddForce(new Vector3(duckCamera.transform.forward.x * 10, 70, duckCamera.transform.forward.z * 10), ForceMode.Impulse);
+				playFlapSound();
+			}
+		}
+
+		float height = rbody.position.y;
+		float fallspeed = rbody.velocity.magnitude;
+		if (height < 0) height = 0;
+		rbody.mass = weight + height * 0.5f;
+
+		// Wind sound
+		float windVolume = (fallspeed * 1.2f) + (height * 0.6f) -70f;
+		if (windVolume > -10) windVolume = -10;
+		mixer.SetFloat("cutoff", 200 + fallspeed * 20f);
+		mixer.SetFloat("windvolume", windVolume);
+	}
 
     void OnTriggerEnter(Collider other)
     {
@@ -89,5 +107,13 @@ public class DuckController : Controller {
     {
         flap.pitch = (Random.Range(0.9f, 1.1f));
         flap.PlayOneShot(flap.clip, 0.8f);
+    }
+
+    void grounding()
+    {
+        groundDetecPos = grounddetector.transform.position;
+        int layerMask = 1 << 0;
+        Collider[] found = Physics.OverlapSphere(groundDetecPos, 0.5f, layerMask);
+        isGrounded = found.Length > 0;
     }
 }
