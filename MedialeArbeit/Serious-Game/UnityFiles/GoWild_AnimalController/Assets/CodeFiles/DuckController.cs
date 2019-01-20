@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 public class DuckController : Controller {
 
-    public float speed, rotSpeed, weight;
+    public float speed, rotSpeed, wingpower, flyForwardSpeed;
     public Transform grounddetector;
     private Vector3 groundDetecPos;
 
@@ -63,13 +63,13 @@ public class DuckController : Controller {
 
 		if (Input.GetButtonDown("Jump"))
 		{
-			rbody.AddForce(new Vector3(duckCamera.transform.forward.x * 10, 100, duckCamera.transform.forward.z * 10), ForceMode.Impulse);
+			rbody.AddForce(new Vector3(duckCamera.transform.forward.x * flyForwardSpeed, wingpower, duckCamera.transform.forward.z * flyForwardSpeed), ForceMode.Impulse);
 			playFlapSound();
 		}
 
 		if (leftJoyCon != null && rightJoyCon != null) {
 			if (leftJoyCon.isFlying () && rightJoyCon.isFlying ()) {
-				rbody.AddForce(new Vector3(duckCamera.transform.forward.x * 10, 70, duckCamera.transform.forward.z * 10), ForceMode.Impulse);
+				rbody.AddForce(new Vector3(duckCamera.transform.forward.x * flyForwardSpeed, wingpower, duckCamera.transform.forward.z * flyForwardSpeed), ForceMode.Impulse);
 				playFlapSound();
 			}
 		}
@@ -77,7 +77,6 @@ public class DuckController : Controller {
 		float height = rbody.position.y;
 		float fallspeed = rbody.velocity.magnitude;
 		if (height < 0) height = 0;
-		rbody.mass = weight + height * 0.5f;
 
 		// Wind sound
 		float windVolume = (fallspeed * 1.2f) + (height * 0.6f) -70f;
