@@ -14785,8 +14785,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467333734}
-  m_LocalRotation: {x: -0.05533144, y: 0.12654406, z: 0.007069792, w: 0.9903914}
-  m_LocalPosition: {x: 314.28406, y: 13.952286, z: 206.67844}
+  m_LocalRotation: {x: -0.027784115, y: -0.5177441, z: 0.016836518, w: -0.8549185}
+  m_LocalPosition: {x: 324.85376, y: 19.114853, z: 9.695038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -22289,6 +22289,7 @@ GameObject:
   - component: {fileID: 724653873}
   - component: {fileID: 724653875}
   - component: {fileID: 724653874}
+  - component: {fileID: 724653878}
   - component: {fileID: 947104763}
   - component: {fileID: 724653872}
   - component: {fileID: 724653876}
@@ -22634,6 +22635,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &724653878
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724653871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 7.26
+  m_Height: 14.89
+  m_Direction: 1
+  m_Center: {x: 0, y: 5.5901775, z: -1.6849575}
 --- !u!1001 &726566445
 Prefab:
   m_ObjectHideFlags: 0
@@ -34074,7 +34088,7 @@ GameObject:
   - component: {fileID: 1073682703}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35973,7 +35987,7 @@ GameObject:
   - component: {fileID: 1161312781}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37630,7 +37644,7 @@ GameObject:
   - component: {fileID: 1226862784}
   m_Layer: 0
   m_Name: Sphere (2)
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
